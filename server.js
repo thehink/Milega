@@ -1,17 +1,35 @@
-/*eslint no-console:0 */
-'use strict';
-require('core-js/fn/object/assign');
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
-const config = require('./webpack.config');
-const open = require('open');
+var browserSync,
+    webpack,
+    webpackDevMiddleware,
+    webpackHotMiddleware,
+    webpackConfig,
+    bundler;
 
-new WebpackDevServer(webpack(config), config.devServer)
-.listen(config.port, 'localhost', (err) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log('Listening at localhost:' + config.port);
-  console.log('Opening your system browser...');
-  open('http://localhost:' + config.port + '/webpack-dev-server/');
+browserSync = require('browser-sync');
+webpack = require('webpack');
+webpackDevMiddleware = require('webpack-dev-middleware');
+webpackHotMiddleware = require('webpack-hot-middleware');
+webpackConfig = require('./webpack.config');
+bundler = webpack(webpackConfig);
+
+browserSync({
+    server: {
+        baseDir: './dist/',
+
+        middleware: [
+            webpackDevMiddleware(bundler, {
+                publicPath: webpackConfig.output.publicPath,
+                noInfo: false,
+                quiet: false,
+                stats: {
+                    colors: true
+                }
+            }),
+            webpackHotMiddleware(bundler)
+        ]
+    },
+
+    files: [
+        './dist/assets/*.css'
+    ]
 });

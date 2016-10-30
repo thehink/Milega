@@ -72,8 +72,10 @@ let config = {
 if(env === 'dev'){
   Object.assign(config, {
     entry: [
-      'webpack-dev-server/client?http://localhost:' + port,
-      'webpack/hot/only-dev-server',
+      //'webpack-dev-server/client?http://localhost:' + port,
+      //'webpack/hot/only-dev-server',
+      'webpack/hot/dev-server',
+      'webpack-hot-middleware/client',
       './src/index'
     ],
     port: port,
