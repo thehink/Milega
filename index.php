@@ -2,7 +2,9 @@
 require 'lib/flight/Flight.php';
 
 Flight::route('/', function(){
-    echo 'hello world!';
+    Flight::render( 'index', [
+      'variable' => 'OMG it works!'
+    ]);
 });
 
 
