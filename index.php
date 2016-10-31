@@ -2,14 +2,19 @@
 require 'lib/flight/Flight.php';
 
 Flight::route('/', function(){
-    Flight::render( 'index', [
-      'variable' => 'OMG it works!'
-    ]);
+    Flight::render( 'header', []);
+    Flight::render( 'index', []);
+    Flight::render( 'footer', []);
 });
 
 
 Flight::route('/test', function(){
-    echo 'test';
+
+
+
+  Flight::render( 'header', []);
+  Flight::render( 'test', ['variabel' => 'något']);
+  Flight::render( 'footer', []);
 });
 
 Flight::start();
