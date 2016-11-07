@@ -1,5 +1,5 @@
 <?php
-require 'lib/flight/Flight.php';
+require_once 'lib/header.php';
 
 Flight::route('/', function(){
     Flight::render( 'header', []);
@@ -7,11 +7,17 @@ Flight::route('/', function(){
     Flight::render( 'footer', []);
 });
 
-
 Flight::route('/test', function(){
-  Flight::render( 'header', []);
-  Flight::render( 'test', ['variabel' => 'något']);
-  Flight::render( 'footer', []);
+    Authentication::requireLoggedIn();
+    Flight::render( 'header', []);
+    Flight::render( 'index', []);
+    Flight::render( 'footer', []);
+});
+
+
+Flight::route('POST /login', function(){
+  $request = Flight::request();
+  print_r($request);
 });
 
 
