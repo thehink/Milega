@@ -1,0 +1,14 @@
+header{
+  background: #EEE;
+}
+
+header h1{
+  margin: 0;
+  padding: 0;
+}
+
+
+nav, .content{
+  width: 70%;
+  margin: 0 auto;
+}

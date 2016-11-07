@@ -1,1 +1,3 @@
-<h1>Index</h1>
+<div class="content">
+  <h2>Asd</h2>
+</div>
