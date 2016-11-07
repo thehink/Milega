@@ -12,4 +12,15 @@
     <li><a href="/">Link2<a></li>
     <li><a href="/">Link3<a></li>
   </ul>
+  <div class="login">
+    <span>Login</span>
+    <div class="login-wrapper">
+      <form class="login-form">
+        <label>Email</label>
+        <input type="email" />
+        <label>Password</label>
+        <input type="password" />
+      </form>
+    </div>
+  </div>
 </header>
