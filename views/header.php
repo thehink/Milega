@@ -10,12 +10,13 @@
 <header>
   <nav class="nav">
   <img src="./assets/images/milegalogo.png" alt="Logotype" />
-    <ul class="nav">
-      <li><a href="/">Kursmaterial<a></li>
-      <li><a href="/">Tester<a></li>
-      <li><a href="/">Föreläsningar<a></li>
+    <ul>
+      <li><a href="/">Kursmaterial</a></li>
+      <li><a href="/">Tester</a></li>
+      <li><a href="/">Föreläsningar</a></li>
+      <li><a onclick="showLogin()">Login</a></li>
     </ul>
-    <div class="login">
+    <div class="login" style="display: none">
       <span>Login</span>
       <div class="login-wrapper">
         <form class="login-form" action="/login" method="POST">
