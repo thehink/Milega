@@ -20,8 +20,33 @@ class User
     //return self::remove($this->id);
   }
 
-  public static function addUser(){
+  public static function addUser($email, $password, $firstname, $lastname){
+    $db = Flight::db();
 
+    $stmt = $db->prepare("
+    INSERT INTO users (
+                    firstName,
+                    lastName,
+                    email,
+                    password
+                )
+                VALUES (
+                    :firstName,
+                    :lastName,
+                    :email,
+                    :password
+                )
+    ");
+
+    $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+    $stmt->execute([
+      'email' => $email,
+      'password' => password_hash($password, PASSWORD_BCRYPT),
+      'firstName' => $firstname,
+      'lastName' => $lastname,
+    ]);
+
+    return $db->lastInsertId();
   }
 
   public static function getUserByEmail($email){

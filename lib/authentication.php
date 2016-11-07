@@ -22,7 +22,7 @@ class Authentication
   }
 
   public static function register($email, $password, $firstName, $lastName){
-    password_hash($password, PASSWORD_BCRYPT);
+
   }
 
   public static function login($email, $password){
