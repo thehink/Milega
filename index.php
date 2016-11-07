@@ -1,5 +1,12 @@
 <?php
 require_once 'lib/header.php';
+require_once 'pages/register.php';
+
+Flight::map('display', function($name, $data){
+  Flight::render( 'header');
+  Flight::render( $name, $data);
+  Flight::render( 'footer');
+});
 
 Flight::route('/', function(){
     Flight::render( 'header', []);
@@ -14,19 +21,12 @@ Flight::route('/test', function(){
     Flight::render( 'footer', []);
 });
 
-Flight::route('GET /register', function(){
-  Flight::render( 'header', []);
-  Flight::render( 'register', []);
-  Flight::render( 'footer', []);
-});
+Flight::route('GET /register', ['Register', 'get']);
+Flight::route('POST /register', ['Register', 'post']);
 
 Flight::route('POST /login', function(){
   $email = $_POST['email'];
   $password = $_POST['password'];
-  print_r($_POST);
-});
-
-Flight::route('POST /register', function(){
   print_r($_POST);
 });
 
