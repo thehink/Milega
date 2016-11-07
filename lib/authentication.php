@@ -50,7 +50,7 @@ class Authentication
   }
 
   public static function requireLoggedIn(){
-    if(!Authentication::$isLoggedIn{
+    if(!Authentication::$isLoggedIn){
       Flight::redirect('/');
       exit;
     }

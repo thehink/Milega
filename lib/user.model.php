@@ -1,15 +1,11 @@
 <?php
 
-
-/**
- *
- */
 class User
 {
 
-  function __construct(argument)
+  function __construct()
   {
-    # code...
+
   }
 
   public function update(){
@@ -21,11 +17,7 @@ class User
   }
 
   public function remove(){
-    return self::remove($this->id);
-  }
-
-  public static function remove($id){
-
+    //return self::remove($this->id);
   }
 
   public static function addUser(){
@@ -35,11 +27,11 @@ class User
   public static function getUserByEmail($email){
     $db = Flight::db();
 
-    $stmt = $db->prepare(<<< EOT
-        SELECT id, email, firstname, password
-        FROM users
-        WHERE email = :email
-    EOT);
+    $stmt = $db->prepare("
+      SELECT id, email, firstname, password
+      FROM users
+      WHERE email = :email
+    ");
 
     $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
     $stmt->execute([
@@ -52,11 +44,11 @@ class User
   public static function getUser($id){
     $db = Flight::db();
 
-    $stmt = $db->prepare(<<< EOT
-        SELECT id, email, firstname, password
-        FROM users
-        WHERE id = :id
-    EOT);
+    $stmt = $db->prepare("
+      SELECT id, email, firstname, password
+      FROM users
+      WHERE id = :id
+    ");
 
     $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
     $stmt->execute([
