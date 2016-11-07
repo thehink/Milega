@@ -1,14 +1,55 @@
-header{
-  background: #EEE;
+header {
+  background: white;
+  width: 100%;
+
 }
 
-header h1{
-  margin: 0;
-  padding: 0;
+footer {
+  background: white;
+  display: inline-block;
+  width: 100%;
 }
 
+footer < p {
+  font-size: 10px;
+  padding: 5px;
+  margin: 5px;
+}
 
-nav, .content{
+body {
+  background: lightgrey;
+
+}
+
+.nav {
   width: 70%;
   margin: 0 auto;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.nav > img {
+  height: 25px;
+  width: auto;
+}
+
+.login-wrapper {
+
+}
+
+.login {
+
+}
+
+li a {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px;
+  color: black;
+}
+
+li {
+  display: block;
+
 }
