@@ -9,12 +9,10 @@ Flight::route('/', function(){
 
 
 Flight::route('/test', function(){
-
-
-
   Flight::render( 'header', []);
   Flight::render( 'test', ['variabel' => 'något']);
   Flight::render( 'footer', []);
 });
+
 
 Flight::start();
