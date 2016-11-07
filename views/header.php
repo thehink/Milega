@@ -21,7 +21,7 @@
         <form class="login-form" action="/login" method="post">
           <input type="email" placeholder="Din email" />
           <input type="password" placeholder="Lösenord"/>
-          <input type="button" name="submit" value="Logga in">
+          <input type="submit" value="Logga in">
         </form>
       </div>
     </div>
