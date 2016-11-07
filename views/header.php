@@ -18,9 +18,9 @@
     <div class="login">
       <span>Login</span>
       <div class="login-wrapper">
-        <form class="login-form" action="/login" method="post">
-          <input type="email" placeholder="Din email" />
-          <input type="password" placeholder="Lösenord"/>
+        <form class="login-form" action="/login" method="POST">
+          <input type="email" name="email" placeholder="Din email" />
+          <input type="password" name="password" placeholder="Lösenord"/>
           <input type="submit" value="Logga in">
         </form>
       </div>

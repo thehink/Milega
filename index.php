@@ -22,12 +22,12 @@ Flight::route('GET /register', function(){
 
 Flight::route('POST /login', function(){
   $request = Flight::request();
-  print_r($request);
+  print_r($_POST);
 });
 
 Flight::route('POST /register', function(){
   $request = Flight::request();
-  print_r($request);
+  print_r($request->query);
 });
 
 
