@@ -1,3 +1,4 @@
+</div>
 <footer>
 <div class="footer">
   <p> Adress: Kaserntorget 6, 411 18 Göteborg </p>

@@ -24,17 +24,17 @@ class User
     $db = Flight::db();
 
     $stmt = $db->prepare("
-    INSERT INTO users (
-                    firstName,
-                    lastName,
-                    email,
-                    password
+        INSERT INTO users (
+                  firstName,
+                  lastName,
+                  email,
+                  password
                 )
-                VALUES (
-                    :firstName,
-                    :lastName,
-                    :email,
-                    :password
+        VALUES (
+                  :firstName,
+                  :lastName,
+                  :email,
+                  :password
                 )
     ");
 
