@@ -8,6 +8,7 @@ footer {
   background: white;
   display: inline-block;
   width: 100%;
+  padding: 20px;
 }
 
 footer < p {
@@ -16,10 +17,22 @@ footer < p {
   margin: 5px;
 }
 
-body {
-  /*background: url("assets/images/background.png");*/
-  background: grey;
+.content-wrapper {
+  position: relative;
+}
 
+.content-wrapper > h1, h2, p {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  left: 0;
+}
+
+.content-wrapper > img {
+  height: auto;
+  width: 100%;
+  z-index: -1;
 }
 
 .nav {
