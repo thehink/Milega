@@ -8,7 +8,9 @@ Flight::map('error', function(Exception $ex){
     if($ex->getCode() === 9000){
       Flight::set('error', $ex->getMessage());
     }else{
-      die($ex->getTraceAsString());
+      Flight::render( 'header');
+      echo $ex->getTraceAsString();
+      Flight::render( 'footer');
     }
 });
 

@@ -25,12 +25,16 @@ class Register
       'last_name' => 'required|string'
     ]);
 
+    foreach ($formErrors as $key => $value) {
+      Flight::set('register.form.error.' . $key, $value);
+    }
+
     try{
       if(!$formErrors){
         $userId = Authentication::register($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
       }
     } catch(Exception $ex){
-      Flight::set('error', $ex->getMessage());
+      Flight::set('register.error', $ex->getMessage());
     }
 
     if(isset($userId)){
@@ -38,7 +42,6 @@ class Register
       Flight::redirect('/');
     }
 
-
-    self::render($_POST, []);
+    self::render($_POST, $formErrors);
   }
 }
