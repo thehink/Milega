@@ -18,21 +18,27 @@ class Register
   }
 
   public static function post(){
-    $errors = FormValidator::validate($_POST, [
+    $formErrors = FormValidator::validate($_POST, [
       'email' => 'required|email',
       'password' => 'required|password',
       'first_name' => 'required|string',
       'last_name' => 'required|string'
     ]);
 
-    if(!$errors){
-      $errors = Authentication::register($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+    try{
+      if(!$formErrors){
+        $userId = Authentication::register($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+      }
+    } catch(Exception $ex){
+      Flight::set('error', $ex->getMessage());
     }
 
-    if(!$errors){
+    if(!$formErrors && isset($userId)){
       //success
+      Flight::redirect('/');
     }
-    
+
+
     self::render($_POST, []);
   }
 }

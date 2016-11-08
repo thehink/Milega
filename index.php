@@ -2,6 +2,16 @@
 require_once 'lib/header.php';
 require_once 'pages/register.php';
 
+Flight::map('error', function(Exception $ex){
+    // Handle error
+    //echo '<pre>' . $e->getMessage() . '</pre>';
+    if($ex->getCode() === 9000){
+      Flight::set('error', $ex->getMessage());
+    }else{
+      die($ex->getTraceAsString());
+    }
+});
+
 Flight::map('display', function($name, $data){
   Flight::render( 'header');
   Flight::render( $name, $data);

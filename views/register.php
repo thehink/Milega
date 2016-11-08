@@ -11,7 +11,9 @@
     <input type="password" name="password" value=""/>
     <label>Confirm Password</label>
     <input type="password" name="confirm_password" value=""/>
-    <?=isset($error) && isset($error['confirm_password']) ? $error['confirm_password'] : ''?>
+    <?=isset($errors) && isset($errors['confirm_password']) ? $errors['confirm_password'] : ''?>
     <input type="submit" value="Register" />
+
+    <?=Flight::has('error') ? Flight::get('error') : ''?>
   </form>
 </div>

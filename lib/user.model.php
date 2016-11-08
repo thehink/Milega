@@ -20,7 +20,7 @@ class User
     //return self::remove($this->id);
   }
 
-  public static function addUser($email, $password, $firstname, $lastname){
+  public static function add($email, $password, $firstname, $lastname){
     $db = Flight::db();
 
     $stmt = $db->prepare("
@@ -47,6 +47,22 @@ class User
     ]);
 
     return $db->lastInsertId();
+  }
+
+  public static function exists($email){
+    $db = Flight::db();
+
+    $stmt = $db->prepare("
+      SELECT count(*)
+      FROM users
+      WHERE email = :email
+    ");
+
+    $stmt->execute([
+      'email' => $email
+    ]);
+
+    return $stmt->fetchColumn();
   }
 
   public static function getUserByEmail($email){
