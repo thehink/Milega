@@ -33,7 +33,7 @@ class Register
       Flight::set('error', $ex->getMessage());
     }
 
-    if(!$formErrors && isset($userId)){
+    if(isset($userId)){
       //success
       Flight::redirect('/');
     }
