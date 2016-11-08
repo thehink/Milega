@@ -13,7 +13,7 @@ class Authentication
       return;
     }
 
-    $user = User::getUserById($_SESSION['userId']);
+    $user = User::getUser($_SESSION['userId']);
 
     if(!$user){
       throw new Exception("Couldn't find logged in user!");
@@ -43,6 +43,7 @@ class Authentication
 
     $_SESSION['userId'] = $user->id;
     Flight::set('user', $user);
+    return $user->id;
   }
 
   public static function logInByCookie(){

@@ -1,6 +1,7 @@
 <?php
 require_once 'lib/header.php';
 require_once 'pages/register.php';
+require_once 'pages/login.php';
 
 Flight::map('error', function(Exception $ex){
     // Handle error
@@ -41,11 +42,8 @@ Flight::route('/test', function(){
 Flight::route('GET /register', ['Register', 'get']);
 Flight::route('POST /register', ['Register', 'post']);
 
-Flight::route('POST /login', function(){
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  print_r($_POST);
-});
+Flight::route('GET /login', ['Login', 'get']);
+Flight::route('POST /login', ['Login', 'post']);
 
 
 
