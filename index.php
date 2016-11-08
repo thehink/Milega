@@ -12,7 +12,12 @@ Flight::map('error', function(Exception $ex){
     }
 });
 
-Flight::map('display', function($name, $data){
+Flight::map('notFound', function(){
+    // Handle not found
+    Flight::display('404');
+});
+
+Flight::map('display', function($name, $data = []){
   Flight::render( 'header');
   Flight::render( $name, $data);
   Flight::render( 'footer');
