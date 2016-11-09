@@ -20,11 +20,11 @@
     </ul>
   </nav>
 
-  <div class="login" id="login">
+  <div id="login">
       <form class="login-form" action="/login" method="POST">
-        <input type="email" name="email" placeholder="Din email" />
-        <input type="password" name="password" placeholder="Lösenord"/>
-        <input type="submit" value="Logga in">
+        <input type="email" class="loginRow" name="email" placeholder="Din email" />
+        <input type="password" class="loginRow" name="password" placeholder="Lösenord"/>
+        <input type="submit" id="loginButton" value="Logga in">
       </form>
   </div>
 </header>
