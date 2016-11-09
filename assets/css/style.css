@@ -24,7 +24,7 @@ footer < p {
 .content-wrapper {
   position: relative;
   display: block;
-  background: url("/assets/images/backgroundimg.png");
+  background: url("/assets/images/backgroundimage.png");
   padding-bottom: 40%;
   background-size: cover;
 }
@@ -57,12 +57,18 @@ footer < p {
   display: flex;
 }
 
-.login-wrapper {
-
+.login-form {
+  width: 200px;
 }
 
 .login {
-
+  position: absolute;
+  top: 65px;
+  right: 30px;
+  z-index: 10;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #c3c3c3;
 }
 
 li a {
