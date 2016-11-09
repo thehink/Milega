@@ -24,7 +24,7 @@ footer < p {
 .content-wrapper {
   position: relative;
   display: block;
-  background: url("../images/backgroundimg.png");
+  background: url("/assets/images/backgroundimg.png");
   padding-bottom: 40%;
   background-size: cover;
 }
