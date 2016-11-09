@@ -61,7 +61,7 @@ footer < p {
   width: 200px;
 }
 
-.login {
+#login {
   position: absolute;
   top: 65px;
   right: 10px;
@@ -69,7 +69,22 @@ footer < p {
   background-color: white;
   padding: 10px;
   box-shadow: 5px 5px 5px #c3c3c3;
+  border-radius: 5px;
   display: none;
+}
+
+#loginButton {
+border-radius: 5px;
+border: 1px solid grey;
+padding: 3px;
+background-color: white;
+margin-top: 3px;
+}
+
+.loginRow {
+border-radius: 5px;
+padding: 3px;
+margin: 3px;
 }
 
 li a {
