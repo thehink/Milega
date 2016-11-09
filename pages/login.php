@@ -35,6 +35,14 @@ class Login
     }
 
     if(isset($userId)){
+
+      if(isset($_POST['remember_me'])){
+        $timestamp = time() + 60 * 60 * 24 * 30;
+        $expire = date("Y-m-d H:i:s", $timestamp);
+        $token = Token::create($userId, 'login', $expire);
+        setcookie("token", $token->toString(), strtotime($token->expires));
+      }
+
       //success
       Flight::redirect('/');
     }

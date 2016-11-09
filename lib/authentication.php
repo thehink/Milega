@@ -10,7 +10,17 @@ class Authentication
   public static function checkLogin(){
     if(!isset($_SESSION['userId'])){
       //todo: check cookie
-      return;
+
+      if(isset($_COOKIE['token'])){
+        $token = Token::get($_COOKIE['token']);
+        if($token){
+          $_SESSION['userId'] = $token->userId;
+        }else{
+          return;
+        }
+      }else{
+        return;
+      }
     }
 
     $user = User::getUser($_SESSION['userId']);

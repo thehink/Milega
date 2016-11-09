@@ -9,7 +9,10 @@
     <input type="password" name="password" value=""/>
     <?=Flight::get('login.form.error.password')?>
 
-    <input type="submit" value="Login" />
+    <label for="remember_me">Remember me</label>
+    <input id="remember_me" type="checkbox" name="remember_me"/>
+
+    <button type="submit">Login</button>
     <?=Flight::get('login.error')?>
   </form>
 </div>
