@@ -29,4 +29,3 @@
   </nav>
 </header>
 <div class="content-wrapper">
-  <img src="assets/images/backgroundimg.png" alt="background image"/>

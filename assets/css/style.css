@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 header {
   background: white;
   width: 100%;
@@ -19,21 +23,12 @@ footer < p {
 
 .content-wrapper {
   position: relative;
+  display: block;
+  background: url("../images/backgroundimg.png");
+  padding-bottom: 40%;
+  background-size: cover;
 }
 
-.content-wrapper > h1, h2, p {
-  position: absolute;
-  z-index: 1;
-  text-align: center;
-  top: 50%;
-  left: 0;
-}
-
-.content-wrapper > img {
-  height: auto;
-  width: 100%;
-  z-index: -1;
-}
 
 .nav {
   padding: 20px 20px 0px 20px;
