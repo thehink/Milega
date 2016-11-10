@@ -28,6 +28,7 @@ class Authentication
     if(!$user){
       throw new Exception("Couldn't find logged in user!");
     }
+    self::$isLoggedIn = true;
     Flight::set('user', $user);
   }
 
@@ -61,13 +62,24 @@ class Authentication
   }
 
   public static function logout(){
-    unset($_SESSION['userId']);
+    if(isset($_SESSION['userId'])){
+      unset($_SESSION['userId']);
+    }
+
+    if(isset($_COOKIE['token'])){
+      $token = Token::get($_COOKIE['token']);
+      if($token){
+        $token->delete();
+      }
+      setcookie("token", false, time() - 1000*60);
+    }
+
     Flight::clear('user');
   }
 
   public static function requireLoggedIn(){
-    if(!Authentication::$isLoggedIn){
-      Flight::redirect('/');
+    if(!self::$isLoggedIn){
+      Flight::redirect('/login');
       exit;
     }
   }

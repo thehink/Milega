@@ -12,6 +12,11 @@ class Login
     ]);
   }
 
+  public static function logout(){
+    Authentication::logout();
+    Flight::redirect('/login');
+  }
+
   public static function get(){
     self::render();
   }

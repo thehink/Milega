@@ -27,6 +27,7 @@ Flight::map('display', function($name, $data = []){
 });
 
 Flight::route('/', function(){
+    Authentication::requireLoggedIn();
     Flight::render( 'header', []);
     Flight::render( 'index', []);
     Flight::render( 'footer', []);
@@ -44,6 +45,7 @@ Flight::route('POST /register', ['Register', 'post']);
 
 Flight::route('GET /login', ['Login', 'get']);
 Flight::route('POST /login', ['Login', 'post']);
+Flight::route('GET /logout', ['Login', 'logout']);
 
 
 
