@@ -15,6 +15,12 @@ Flight::map('error', function(Exception $ex){
     }
 });
 
+Flight::map('getError', function($error){
+  if(Flight::has($error)){
+    return '<span class="error">' . Flight::get($error) . '</span>';
+  }
+});
+
 Flight::map('notFound', function(){
     // Handle not found
     Flight::display('404');
