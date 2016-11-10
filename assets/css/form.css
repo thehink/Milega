@@ -10,6 +10,13 @@
   margin: 0 auto;
 }
 
+@media all and (max-width: 610px) {
+  .modal-form{
+    width: 100%;
+    min-width: auto;
+  }
+}
+
 .form-wrapper{
   color: var(--milega-color-white);
 }
@@ -41,7 +48,7 @@
 
 .form-wrapper button[type=submit]{
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 10px auto;
 }
 
 
