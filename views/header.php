@@ -12,13 +12,13 @@
   <body>
 <header>
   <nav class="nav">
-  <img src="./assets/images/milegalogo.png" alt="Logotype" />
     <ul>
       <li><a href="/">Kursmaterial</a></li>
       <li><a href="/">Tester</a></li>
       <li><a href="/">Föreläsningar</a></li>
       <li><a onclick="showLogin()" style="cursor: pointer">Logga in</a></li>
     </ul>
+    <a href="/"><img src="./assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
 
   <div id="login">
@@ -30,6 +30,7 @@
         <input type="submit" id="loginButton" value="Logga in">
       </form>
   </div>
+
 </header>
 
 <div class="content-wrapper">
