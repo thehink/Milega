@@ -1,4 +1,5 @@
 <div class="content">
-  <h2>Index</h2>
-  <?=print_r(Flight::get('user'))?>
+  <h2>Välkommen <?=print_r(Flight::get('user'))?> (inloggad sida?)</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
 </div>
