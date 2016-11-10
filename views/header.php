@@ -25,7 +25,7 @@
         <input type="email" class="loginRow" name="email" placeholder="Din email" />
         <input type="password" class="loginRow" name="password" placeholder="Lösenord"/>
         <input type="checkbox" name="remember" id="rememberCheckbox">
-        <label for="rememberCheckbox">Kom ihåg mig</label>
+        <label for="rememberCheckbox" style="font-size: 12px">Kom ihåg mig</label>
         <input type="submit" id="loginButton" value="Logga in">
       </form>
   </div>
