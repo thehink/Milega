@@ -90,6 +90,7 @@ border: 1px solid grey;
 padding: 3px;
 background-color: white;
 margin-top: 3px;
+float: right;
 }
 
 .loginRow {
