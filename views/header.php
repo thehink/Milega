@@ -13,10 +13,9 @@
 <header>
   <nav class="nav">
     <ul>
-      <li><a href="/">Kursmaterial</a></li>
-      <li><a href="/">Tester</a></li>
-      <li><a href="/">Föreläsningar</a></li>
-      <li><a onclick="showLogin()" style="cursor: pointer">Logga in</a></li>
+      <li><a href="/profile"><?=Localization::get('PROFILE')?></a></li>
+      <li><a href="/"><?=Localization::get('MATERIAL')?></a></li>
+      <li><a href="/"><?=Localization::get('ATTATCHMENTS')?></a></li>
     </ul>
     <a href="/"><img src="./assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
@@ -30,7 +29,18 @@
         <input type="submit" id="loginButton" value="Logga in">
       </form>
   </div>
-
 </header>
+
+<? if(isset($subHeader)): ?>
+<div class="sub-header">
+  <div class="content">
+    <? foreach ($subHeader as $title => $arr) : ?>
+    <div class="sub-header-item<?=$arr['selected'] ? ' selected' : ''?>">
+      <a href="<?=$arr['url']?>"><?=$title?></a>
+    </div>
+    <? endforeach; ?>
+  </div>
+</div>
+<? endif; ?>
 
 <div class="content-wrapper">
