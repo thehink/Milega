@@ -27,9 +27,9 @@ Flight::map('notFound', function(){
 });
 
 Flight::map('display', function($name, $data = []){
-  Flight::render( 'header');
+  Flight::render( 'header', $data);
   Flight::render( $name, $data);
-  Flight::render( 'footer');
+  Flight::render( 'footer', $data);
 });
 
 Flight::route('/', function(){
