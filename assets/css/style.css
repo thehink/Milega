@@ -1,6 +1,10 @@
 *{
   box-sizing: border-box;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
 
 header {
   background: white;
@@ -27,6 +31,13 @@ footer < p {
   background: url("/assets/images/backgroundimage.png");
   padding-bottom: 40%;
   background-size: cover;
+}
+
+.content {
+  margin: auto;
+  width: 40%;
+  padding: 30px 10px 10px 10px;
+  text-align: center;
 }
 
 
