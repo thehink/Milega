@@ -1,3 +1,11 @@
+:root {
+  --milega-color-black: #4F5758;
+  --milega-color-white: #EEF2F2;
+  --milega-color-dark-green: #7AC2BB;
+  --milega-color-green: #98D1CE;
+  --milega-color-red: #E2464A;
+}
+
 *{
   box-sizing: border-box;
 }
