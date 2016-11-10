@@ -16,7 +16,7 @@
       <li><a href="/">Kursmaterial</a></li>
       <li><a href="/">Tester</a></li>
       <li><a href="/">Föreläsningar</a></li>
-      <li><a onclick="showLogin()" style="cursor: pointer">Login</a></li>
+      <li><a onclick="showLogin()" style="cursor: pointer">Logga in</a></li>
     </ul>
   </nav>
 
@@ -24,6 +24,8 @@
       <form class="login-form" action="/login" method="POST">
         <input type="email" class="loginRow" name="email" placeholder="Din email" />
         <input type="password" class="loginRow" name="password" placeholder="Lösenord"/>
+        <input type="checkbox" name="remember" id="rememberCheckbox">
+        <label for="rememberCheckbox">Kom ihåg mig</label>
         <input type="submit" id="loginButton" value="Logga in">
       </form>
   </div>
