@@ -9,16 +9,10 @@
 *{
   box-sizing: border-box;
 }
-body {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  height: 100%;
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 header {
@@ -42,7 +36,8 @@ footer < p {
 .content-wrapper {
   position: relative;
   display: block;
-  height: calc(100% - 58px);
+  min-height: calc(100% - 106px);
+  padding-bottom: 50px;
   background: url("/assets/images/backgroundimage.png") no-repeat;
   background-size: cover;
 }
@@ -90,6 +85,38 @@ footer < p {
 .nav ul li > a{
   color: #FFF;
 }
+
+.sub-header{
+  background: #626A6C;
+}
+
+.sub-header .content{
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sub-header .sub-header-item{
+}
+
+.sub-header .sub-header-item > a{
+  display: block;
+  padding: 15px 20px;
+  color: var(--milega-color-white);
+  text-decoration: none;
+}
+
+.sub-header .sub-header-item:hover > a{
+  color: #CCC;
+}
+
+.sub-header .sub-header-item.selected > a{
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+}
+
+
 
 .login-form {
   width: 200px;
