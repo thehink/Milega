@@ -31,16 +31,15 @@ class Login
       Flight::set('login.form.error.' . $key, $value);
     }
 
-    try{
-      if(!$formErrors){
-        $userId = Authentication::login($_POST['email'], $_POST['password']);
+    if(!$formErrors){
+      try{
+          $userId = Authentication::login($_POST['email'], $_POST['password']);
+      } catch(Exception $ex){
+          Flight::set('login.error', $ex->getMessage());
       }
-    } catch(Exception $ex){
-      Flight::set('login.error', $ex->getMessage());
     }
 
     if(isset($userId)){
-
       if(isset($_POST['remember_me'])){
         $timestamp = time() + 60 * 60 * 24 * 30;
         $expire = date("Y-m-d H:i:s", $timestamp);
