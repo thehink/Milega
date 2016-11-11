@@ -2,6 +2,7 @@
 require_once 'lib/header.php';
 require_once 'pages/register.php';
 require_once 'pages/login.php';
+require_once 'pages/profile.php';
 
 Flight::map('error', function(Exception $ex){
     // Handle error
@@ -27,16 +28,10 @@ Flight::map('notFound', function(){
 });
 
 Flight::map('display', function($name, $data = []){
+  $data['page'] = $data['page'] ?? $name;
   Flight::render( 'header', $data);
   Flight::render( $name, $data);
   Flight::render( 'footer', $data);
-});
-
-Flight::route('/', function(){
-    Authentication::requireLoggedIn();
-    Flight::render( 'header', []);
-    Flight::render( 'index', []);
-    Flight::render( 'footer', []);
 });
 
 Flight::route('/test', function(){
@@ -45,6 +40,9 @@ Flight::route('/test', function(){
     Flight::render( 'index', []);
     Flight::render( 'footer', []);
 });
+
+Flight::route('/', ['Profile', 'get']);
+Flight::route('GET /profile', ['Profile', 'get']);
 
 Flight::route('GET /register', ['Register', 'get']);
 Flight::route('POST /register', ['Register', 'post']);
