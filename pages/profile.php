@@ -14,8 +14,8 @@ class Profile
           'url' => 'http://google.se',
           'selected' => true
         ],
-        'Title2' => [
-          'url' => 'http://google.se',
+        'Edit Profile' => [
+          'url' => 'profile/edit',
           'selected' => false
         ]
       ]
