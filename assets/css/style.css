@@ -19,6 +19,16 @@ html,body {
     height:100%;
 }
 
+a{
+  color: var(--milega-color-white);
+  text-decoration: none;
+  font-size: 0.7em;
+}
+
+a:hover{
+  color: #CCC;
+}
+
 header {
   background: var(--milega-color-dark-green);
   width: 100%;
