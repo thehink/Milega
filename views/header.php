@@ -1,3 +1,7 @@
+<?php
+$page = $page ?? 'profile';
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,9 +17,19 @@
 <header>
   <nav class="nav">
     <ul>
-      <li><a href="/profile"><?=Localization::get('PROFILE')?></a></li>
-      <li><a href="/"><?=Localization::get('MATERIAL')?></a></li>
-      <li><a href="/"><?=Localization::get('ATTATCHMENTS')?></a></li>
+      <? if(Flight::has('user')) : ?>
+      <li class="<?=$page === 'profile' ? 'selected' : ''?>"><a href="/profile"><?=Localization::get('PROFILE')?></a></li>
+      <li class="<?=$page === 'material' ? 'selected' : ''?>"><a href="/material"><?=Localization::get('MATERIAL')?></a></li>
+      <li class="<?=$page === 'attachments' ? 'selected' : ''?>"><a href="/attachments"><?=Localization::get('ATTACHMENTS')?></a></li>
+      <li><a href="/logout"><?=Localization::get('LOGOUT')?></a></li>
+      <? endif; ?>
+      <? if($page === 'login') :?>
+      <li class="selected"><a href="/login"><?=Localization::get('LOGIN')?></a></li>
+      <? endif; ?>
+      <? if($page === 'register') :?>
+      <li class="selected"><a href="/register"><?=Localization::get('REGISTER')?></a></li>
+      <? endif; ?>
+
     </ul>
     <a href="/"><img src="./assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
@@ -31,16 +45,17 @@
   </div>
 </header>
 
-<? if(isset($subHeader)): ?>
 <div class="sub-header">
   <div class="content">
+<? if(isset($subHeader)): ?>
+
     <? foreach ($subHeader as $title => $arr) : ?>
     <div class="sub-header-item<?=$arr['selected'] ? ' selected' : ''?>">
       <a href="<?=$arr['url']?>"><?=$title?></a>
     </div>
     <? endforeach; ?>
+<? endif; ?>
   </div>
 </div>
-<? endif; ?>
 
 <div class="content-wrapper">
