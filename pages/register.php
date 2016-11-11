@@ -26,7 +26,7 @@ class Register
     ]);
 
     foreach ($formErrors as $key => $value) {
-      Flight::set('register.form.error.' . $key, $value);
+      Flight::set('register.form.error.' . $key, Localization::get($value));
     }
 
     try{

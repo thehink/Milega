@@ -24,7 +24,7 @@ class Localization
     if(isset(self::$strings[$id])){
       return sprintf(self::$strings[$id], ...$params);
     }
-    return '_Undefined Localization: ' . $id . '_';
+    return '_' . $id . '_';
   }
 
 }

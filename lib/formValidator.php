@@ -1,4 +1,3 @@
-
 <?php
 
 class FormValidator {
@@ -33,7 +32,7 @@ class FormValidator {
 
   public static function validateRequired($value){
     if(!$value){
-      return 'You need to enter something here';
+      return 'FIELD_REQUIRED';
     }
 
 
@@ -54,7 +53,7 @@ class FormValidator {
     }
 
     if(!filter_var($value, FILTER_VALIDATE_EMAIL)){
-      return 'Invalid email!';
+      return 'INVALID_EMAIL';
     }
 
     return false;

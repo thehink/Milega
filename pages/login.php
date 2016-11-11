@@ -39,7 +39,7 @@ class Login
     ]);
 
     foreach ($formErrors as $key => $value) {
-      Flight::set('login.form.error.' . $key, $value);
+      Flight::set('login.form.error.' . $key, Localization::get($value));
     }
 
     if(!$formErrors){
