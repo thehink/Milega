@@ -8,17 +8,7 @@ class Login
 
   public static function render($data = []){
     Flight::display( 'login', [
-      'data' => $data,
-      'subHeader' => [
-        'Title' => [
-          'url' => 'http://google.se',
-          'selected' => true
-        ],
-        'Title2' => [
-          'url' => 'http://google.se',
-          'selected' => false
-        ]
-      ]
+      'data' => $data
     ]);
   }
 
