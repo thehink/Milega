@@ -41,7 +41,7 @@ class Authentication
     return $userId;
   }
 
-  public static function login($email, $password){
+  public static function login($email, $password, $rememberMe = false){
     $user = User::getUserByEmail($email);
 
     if(!$user){
@@ -52,13 +52,16 @@ class Authentication
       throw new Exception("Email or (password) is incorrect!");
     }
 
+    if($rememberMe){
+      $timestamp = time() + 60 * 60 * 24 * 30;
+      $expire = date("Y-m-d H:i:s", $timestamp);
+      $token = Token::create($user->id, 'login', $expire);
+      setcookie("token", $token->toString(), strtotime($token->expires));
+    }
+
     $_SESSION['userId'] = $user->id;
     Flight::set('user', $user);
     return $user->id;
-  }
-
-  public static function logInByCookie(){
-
   }
 
   public static function logout(){
