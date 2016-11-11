@@ -1,14 +1,11 @@
 </div>
-<!--
 <footer>
-<div class="footer">
-  <p> Adress: Kaserntorget 6, 411 18 Göteborg </p>
-  <p> Tel: 031 105 490 </p>
-  <p> e-mail: contact@milega.se </p>
-</div>
+  <ul>
+    <li class="phone"><a href="tel:031105490"></a></li>
+    <li class="email"><a href="mailto:contact@milega.se"></a></li>
+  <ul>
 </footer>
 
--->
 
 
 </body>
