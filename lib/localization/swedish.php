@@ -2,6 +2,9 @@
 Localization::register([
   'PROFILE' => 'Profil',
   'WELCOME_USERNAME' => 'Välkommen, %s',
-  'ATTATCHMENTS' => 'Bilagor',
-  'MATERIAL' => 'Material'
+  'ATTACHMENTS' => 'Bilagor',
+  'MATERIAL' => 'Material',
+  'LOGIN' => 'Logga in',
+  'REGISTER' => 'Registrera',
+  'LOGOUT' => 'Logga ut'
 ]);
