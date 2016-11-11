@@ -53,7 +53,7 @@ class Authentication
     }
 
     if($rememberMe){
-      $timestamp = time() + 60 * 60 * 24 * 30;
+      $timestamp = time() + _AUTHENTICATION_TOKEN_LIFETIME_;
       $expire = date("Y-m-d H:i:s", $timestamp);
       $token = Token::create($user->id, 'login', $expire);
       setcookie("token", $token->toString(), strtotime($token->expires));
