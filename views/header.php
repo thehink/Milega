@@ -8,9 +8,9 @@ $page = $page ?? 'profile';
     <meta charset="utf-8">
     <title>Milega</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-    <link href="./assets/css/normalize.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet" />
-    <link href="./assets/css/form.css" rel="stylesheet" />
+    <link href="/assets/css/normalize.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/form.css" rel="stylesheet" />
     <script type="text/javascript" src="/assets/js/functions.js"></script>
   </head>
   <body>
