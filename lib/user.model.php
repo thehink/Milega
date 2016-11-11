@@ -20,7 +20,7 @@ class User
     //return self::remove($this->id);
   }
 
-  public static function add($email, $password, $firstname, $lastname){
+  public static function add($email, $password, $firstname, $lastname, $role = 'user'){
     $db = Flight::db();
 
     $stmt = $db->prepare("
@@ -28,13 +28,15 @@ class User
                   firstName,
                   lastName,
                   email,
-                  password
+                  password,
+                  role
                 )
         VALUES (
                   :firstName,
                   :lastName,
                   :email,
-                  :password
+                  :password,
+                  :role
                 )
     ");
 
@@ -44,6 +46,7 @@ class User
       'password' => password_hash($password, PASSWORD_BCRYPT),
       'firstName' => $firstname,
       'lastName' => $lastname,
+      'role' => $role
     ]);
 
     return $db->lastInsertId();
@@ -69,7 +72,13 @@ class User
     $db = Flight::db();
 
     $stmt = $db->prepare("
-      SELECT id, email, firstname, password
+      SELECT
+        id,
+        email,
+        password,
+        role,
+        firstName,
+        lastName
       FROM users
       WHERE email = :email
     ");
@@ -86,7 +95,12 @@ class User
     $db = Flight::db();
 
     $stmt = $db->prepare("
-      SELECT id, email, firstname, password
+      SELECT
+        id,
+        email,
+        role,
+        firstName,
+        lastName
       FROM users
       WHERE id = :id
     ");
