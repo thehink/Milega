@@ -100,7 +100,8 @@ class User
         email,
         role,
         firstName,
-        lastName
+        lastName,
+        guideComplete
       FROM users
       WHERE id = :id
     ");
