@@ -55,7 +55,7 @@ $page = $page ?? 'profile';
 <? if(isset($subHeader)): ?>
 
     <? foreach ($subHeader as $title => $arr) : ?>
-    <div class="sub-header-item<?=$arr['selected'] ? ' selected' : ''?>">
+    <div class="sub-header-item<?=isset($arr['selected']) ? ' selected' : ''?>">
       <a href="<?=$arr['url']?>"><?=$title?></a>
     </div>
     <? endforeach; ?>
