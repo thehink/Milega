@@ -14,6 +14,6 @@
       <button type="submit"><?=Localization::get('LOGIN')?></button>
       <?=Flight::getError('login.error')?>
     </form>
-    <a href="/forgot_password"><?=Localization::get('FORGOT_PASSWORD')?></a>
+    <a class="remember-me" href="/forgot_password"><?=Localization::get('FORGOT_PASSWORD')?></a>
   </div>
 </div>

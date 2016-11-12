@@ -13,6 +13,17 @@
   text-shadow: inset 1px 1px 1px rgba(0,0,0,1);
 }
 
+a.remember-me{
+  color: var(--milega-color-white);
+  text-decoration: none;
+  font-size: 0.7em;
+}
+
+a.remember-me:hover{
+  color: #CCC;
+}
+
+
 @media all and (max-width: 610px) {
   .modal-form{
     width: 100%;
