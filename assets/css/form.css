@@ -2,7 +2,7 @@
   box-shadow: -1px -1px 5px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,1);
   border: 1px solid #222;
   border-top: 1px solid rgba(255,255,255,.3);
-  background: rgba(0,0,0,.6);
+  background: var(--color-transparent-black);
   padding: 10px 10px;
   border-radius: 5px;
   width: 50%;
