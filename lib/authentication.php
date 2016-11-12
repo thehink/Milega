@@ -80,6 +80,13 @@ class Authentication
     Flight::clear('user');
   }
 
+  public static function isAdmin(){
+    if(Authentication::$isLoggedIn && Flight::get('user')->role === 'admin'){
+      return true;
+    }
+    return false;
+  }
+
   public static function requireRole($role){
     if(!self::$isLoggedIn || Flight::get('user')->role !== $role){
       Flight::display('404');
