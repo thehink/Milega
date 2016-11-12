@@ -1,5 +1,5 @@
 <?php
-require 'lib/formValidator.php';
+require_once 'lib/formValidator.php';
 /**
  *
  */
