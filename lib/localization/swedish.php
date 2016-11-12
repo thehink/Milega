@@ -12,5 +12,6 @@ Localization::register([
   'REMEMBER_ME' => 'Kom ihåg mig',
   'FORGOT_PASSWORD' => 'Glömt lösenord',
   'PASSWORD' => 'Lösenord',
-  'EMAIL' => 'Email'
+  'EMAIL' => 'Email',
+  'INTRODUCTION' => 'Introduktion'
 ]);
