@@ -47,6 +47,8 @@ Flight::route('GET /profile', ['Profile', 'get']);
 Flight::route('GET /register', ['Register', 'get']);
 Flight::route('POST /register', ['Register', 'post']);
 
+Flight::route('GET /test2', ['Pages', 'profile']);
+
 Flight::route('GET /login', ['Login', 'get']);
 Flight::route('POST /login', ['Login', 'post']);
 Flight::route('GET /logout', ['Login', 'logout']);
