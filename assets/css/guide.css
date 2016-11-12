@@ -1,0 +1,33 @@
+.guide-wrapper{
+  padding: 50px;
+  background: var(--color-transparent-black);
+  border-radius: 10px;
+}
+
+
+.guide-content{
+  padding: 50px;
+  background: var(--milega-color-white);
+  border-radius: 10px;
+}
+
+
+.guide-nav-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -25px;
+  margin-left: -25px;
+  width: calc(100% + 50px);
+}
+
+.guide-nav-buttons > a{
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: #111;
+  border-radius: 25px;
+}
+
+.guide-nav-buttons > a:hover{
+  background: #222;
+}

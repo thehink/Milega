@@ -41,6 +41,8 @@ Flight::route('/test', function(){
     Flight::render( 'footer', []);
 });
 
+Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
+
 Flight::route('/', ['Profile', 'get']);
 Flight::route('GET /profile', ['Profile', 'get']);
 
