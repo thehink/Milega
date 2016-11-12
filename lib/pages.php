@@ -5,6 +5,7 @@
 class Pages
 {
   public static function __callStatic($method_name, $args) {
+     $method_name = strtolower($method_name);
      require_once "pages/$method_name.php";
      if(in_array($_SERVER['REQUEST_METHOD'], ['POST', 'GET', 'PUT', 'DELETE'])){
        try{
