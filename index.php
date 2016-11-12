@@ -41,6 +41,12 @@ Flight::route('/test', function(){
     Flight::render( 'footer', []);
 });
 
+Flight::route('/php_info', function(){
+    Authentication::requireRole('admin');
+    phpinfo();
+});
+
+
 Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
 
 Flight::route('/', ['Profile', 'get']);
