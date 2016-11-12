@@ -6,11 +6,16 @@ $page = $page ?? 'profile';
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Milega</title>
+    <title><?=isset($title) ? $title . ' | ' :  ''?>Milega</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link href="/assets/css/normalize.css" rel="stylesheet" />
     <link href="/assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/form.css" rel="stylesheet" />
+    <? if(isset($assets)){
+      foreach ($assets as $asset) {
+        echo $asset;
+      }
+    }?>
     <script type="text/javascript" src="/assets/js/functions.js"></script>
   </head>
   <body>
