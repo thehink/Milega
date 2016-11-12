@@ -45,14 +45,20 @@ class Login
     if(!$formErrors){
       try{
           $userId = Authentication::login($_POST['email'], $_POST['password'], isset($_POST['remember_me']));
+          if($userId){
+            //success
+            $user = User::getUser($userId);
+            if(!$user->guideComplete){
+              Flight::redirect('/guide');
+            }else{
+              Flight::redirect('/');
+            }
+            exit;
+          }
       } catch(Exception $ex){
           Flight::set('login.error', $ex->getMessage());
       }
-    }
 
-    if(isset($userId)){
-      //success
-      Flight::redirect('/');
     }
 
     self::render($_POST);
