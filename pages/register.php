@@ -14,10 +14,13 @@ class Register
   }
 
   public static function get(){
+    Authentication::requireRole('admin');
     self::render();
   }
 
   public static function post(){
+    Authentication::requireRole('admin');
+    //validate form
     $formErrors = FormValidator::validate($_POST, [
       'email' => 'required|email',
       'password' => 'required|password',
@@ -25,23 +28,27 @@ class Register
       'last_name' => 'required|string'
     ]);
 
+    //set errors
     foreach ($formErrors as $key => $value) {
       Flight::set('register.form.error.' . $key, Localization::get($value));
     }
 
-    try{
-      if(!$formErrors){
-        $userId = Authentication::register($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+    if(!$formErrors){
+      try{
+          //call register function
+          $userId = Authentication::register($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+          if($userId){
+            //success
+            Flight::redirect('/');
+          }
+      } catch(Exception $ex){
+        Flight::set('register.error', $ex->getMessage());
       }
-    } catch(Exception $ex){
-      Flight::set('register.error', $ex->getMessage());
     }
 
-    if(isset($userId)){
-      //success
-      Flight::redirect('/');
-    }
 
+
+    //render page
     self::render($_POST, $formErrors);
   }
 }
