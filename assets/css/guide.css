@@ -2,15 +2,15 @@
   padding: 50px;
   background: var(--color-transparent-black);
   border-radius: 10px;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-
 .guide-content{
-  padding: 50px;
+  padding: 30px;
   background: var(--milega-color-white);
   border-radius: 10px;
 }
-
 
 .guide-nav-buttons{
   display: flex;
@@ -30,4 +30,9 @@
 
 .guide-nav-buttons > a:hover{
   background: #222;
+}
+
+@media all and (max-width: 610px) {
+  .guide-content {
+  }
 }
