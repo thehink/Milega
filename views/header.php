@@ -28,8 +28,8 @@ $page = $page ?? 'profile';
       <li class="<?=$page === 'attachments' ? 'selected' : ''?>"><a href="/attachments"><?=Localization::get('ATTACHMENTS')?></a></li>
       <li><a href="/logout"><?=Localization::get('LOGOUT')?></a></li>
       <? endif; ?>
-      <? if($page === 'login') :?>
-      <li class="selected"><a href="/login"><?=Localization::get('LOGIN')?></a></li>
+      <? if($page === 'login' || !Authentication::$isLoggedIn) :?>
+      <li class="<?=$page === 'login' ? 'selected' : ''?>"><a href="/login"><?=Localization::get('LOGIN')?></a></li>
       <? endif; ?>
       <? if($page === 'register') :?>
       <li class="selected"><a href="/register"><?=Localization::get('REGISTER')?></a></li>
