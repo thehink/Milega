@@ -80,6 +80,13 @@ class Authentication
     Flight::clear('user');
   }
 
+  public static function requireRole($role){
+    if(!self::$isLoggedIn || Flight::get('user')->role !== $role){
+      Flight::display('404');
+      exit;
+    }
+  }
+
   public static function requireLoggedIn(){
     if(!self::$isLoggedIn){
       Flight::redirect('/login');
