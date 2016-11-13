@@ -7,9 +7,10 @@
 }
 
 .guide-content{
-  padding: 30px;
+  padding: 20px 50px;
   background: var(--milega-color-white);
   border-radius: 10px;
+  text-align: left;
 }
 
 .guide-nav-buttons{

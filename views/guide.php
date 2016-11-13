@@ -2,9 +2,21 @@
   <div class="guide-wrapper">
     <div class="guide-content">
       <p>
-      Vad är Lorem Ipsum?
-        Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.
+        Under fliken Profil finns tre funktioner.</p>
+        <p>
+JTI-profilen: Här får du svaret på vad för typ av
+JTI-profil du är, utifrån JTI-testet.
+<p>
+Ledarskapsgraf: Här ställer du in hur du definerar
+dina ledarskapskvalitéer och kan se din
+personliga utveckling med hjälp av grafer.
 </p>
+Påminnelser: Här ställer du in hur ofta du vill få
+påminnelser om att uppdatera materialet,
+och därmed följa din egen personliga
+ledarskapsutveckling. Du kan även ställa in om
+du vill få dina påminnelser via sms eller e-mail.
+      </p>
     </div>
     <div class="guide-nav-buttons">
       <a href="#"></a>
