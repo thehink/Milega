@@ -13,6 +13,7 @@ class Course
   public static function render($data = []){
     Flight::display( 'Course', [
       'assets' => self::$assets,
+      'page' => 'course',
       'data' => $data,
       'subHeader' => [
         'Dag 1' => [
