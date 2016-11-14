@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>högerpil</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="högerpil-copy">
+            <g id="högerpil" transform="translate(29.500000, 29.500000) scale(-1, 1) rotate(-180.000000) translate(-29.500000, -29.500000) translate(-0.000000, 0.000000)">
+                <circle id="Oval-Copy" fill="#9ACBC7" cx="29.5" cy="29.5" r="29.5"></circle>
+                <g id="arrow-pointing-to-right" transform="translate(29.500000, 30.000000) scale(-1, 1) translate(-29.500000, -30.000000) translate(8.000000, 15.000000)" fill="#FFFFFF">
+                    <path d="M42.2983143,13.2687749 L29.5372464,0.580602823 C28.7586617,-0.193534274 27.495954,-0.193534274 26.7173694,0.580602823 C25.9386252,1.35489852 25.9386252,2.61007594 26.7173694,3.38437164 L36.074582,12.6881324 L1.99391686,12.6881324 C0.892796215,12.6881324 0,13.5758286 0,14.6706593 C0,15.7653313 0.892796215,16.6531862 1.99391686,16.6531862 L36.074582,16.6531862 L26.7176884,25.9569469 C25.9389442,26.7312426 25.9389442,27.98642 26.7176884,28.7607157 C27.106901,29.1475464 27.6173437,29.3413582 28.1276269,29.3413582 C28.6379101,29.3413582 29.1481933,29.1475464 29.5375654,28.7607157 L42.2983143,16.0725437 C43.0770585,15.298248 43.0770585,14.0430706 42.2983143,13.2687749 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
