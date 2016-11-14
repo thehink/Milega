@@ -60,7 +60,7 @@ Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
 
 //endpoint for profile
 Flight::route('/', ['Profile', 'get']);
-Flight::route('GET /profile', ['Pages', 'get']);
+Flight::route('GET /profile', ['Pages', 'Profile']);
 
 //endpoint for register page
 Flight::route('GET /register', ['Pages', 'Register']);
