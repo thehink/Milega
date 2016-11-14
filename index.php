@@ -63,14 +63,15 @@ Flight::route('/', ['Profile', 'get']);
 Flight::route('GET /profile', ['Profile', 'get']);
 
 //endpoint for register page
-Flight::route('GET /register', ['Register', 'get']);
-Flight::route('POST /register', ['Register', 'post']);
+Flight::route('GET /register', ['Pages', 'Register']);
+Flight::route('POST /register', ['Pages', 'Register']);
 
 Flight::route('GET /test2', ['Pages', 'profile']);
 
 //endpoint for login page
-Flight::route('GET /login', ['Login', 'get']);
-Flight::route('POST /login', ['Login', 'post']);
+Flight::route('GET /login', ['Pages', 'Login']);
+Flight::route('POST /login', ['Pages', 'Login']);
+
 Flight::route('GET /logout', ['Login', 'logout']);
 
 
