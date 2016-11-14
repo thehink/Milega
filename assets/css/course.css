@@ -1,0 +1,14 @@
+.content {
+
+}
+
+.content-wrapper {
+
+}
+
+.content-form {
+  background: var(--color-transparent-black);
+  width: 70%;
+  height: auto;
+  text-align: center;
+}
