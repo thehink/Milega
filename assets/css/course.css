@@ -3,12 +3,28 @@
 }
 
 .content-course{
-
+  color: var(--milega-color-white);
+  text-align: left;
+  width: 70%;
+  min-width: 500px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .content-form {
   background: var(--color-transparent-black);
+  padding: 20px 20px;
+  border-radius: 5px;
   width: 70%;
-  height: auto;
-  text-align: center;
+  min-width: 500px;
+  max-width: 700px;
+  margin: 0;
+}
+
+.content-form textarea {
+  border-radius: 5px;
+  width: 100%;
+  min-height: 60px;
+  height: 100px;
+  resize: none;
 }
