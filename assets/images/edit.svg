@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Edit">
+            <g id="Layer_1" fill="#9ACBC7">
+                <path d="M19.9994667,0 C8.95426667,0 0.000133333333,8.9548 0.000133333333,19.9996 C0.000133333333,31.0444 8.95426667,40 19.9994667,40 C31.0446667,40 39.9998667,31.0449333 39.9998667,19.9996 C39.9998667,8.95426667 31.0446667,0 19.9994667,0 L19.9994667,0 Z" id="Shape"></path>
+            </g>
+            <g id="Group" transform="translate(19.727922, 19.727922) rotate(-45.000000) translate(-19.727922, -19.727922) translate(5.227922, 16.227922)" fill="#FFFFFF">
+                <rect id="Rectangle-6" x="8.15823553" y="-6.03961325e-14" width="20.1218247" height="6.59995849" rx="3.29997925"></rect>
+                <path d="M0.838630835,3.74502913 C0.347042307,3.49923487 0.34162342,3.10343307 0.838630835,2.85492936 L6.09484768,0.226820938 C6.34538717,0.101551193 6.54848956,0.21959243 6.54848956,0.496069578 L6.54848956,6.10388892 C6.54848956,6.37786058 6.34372865,6.49757804 6.09484768,6.37313756 L0.838630835,3.74502913 Z" id="Triangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>
