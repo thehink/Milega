@@ -13,5 +13,6 @@ Localization::register([
   'FORGOT_PASSWORD' => 'Glömt lösenord',
   'PASSWORD' => 'Lösenord',
   'EMAIL' => 'Email',
-  'INTRODUCTION' => 'Introduktion'
+  'INTRODUCTION' => 'Introduktion',
+  'COURSE' => 'Kurs',
 ]);
