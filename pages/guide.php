@@ -9,20 +9,21 @@ class Guide
     '<link href="/assets/css/guide.css" rel="stylesheet" />'
   ];
 
-  public static function render(){
+  public static function render($id){
     Flight::display( 'guide', [
       'assets' => self::$assets,
-      'title' => Localization::get('INTRODUCTION')
+      'title' => Localization::get('INTRODUCTION'),
+      'guide' => $id,
     ]);
   }
 
-  public static function get(){
-    Authentication::requireLoggedIn();
-    self::render();
-  }
+  public static function get($id){
 
-  public static function post(){
+    if(!$id){
+      $id = 'intro';
+    }
+
     Authentication::requireLoggedIn();
-    self::render();
+    self::render($id);
   }
 }

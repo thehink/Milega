@@ -1,9 +1,10 @@
 .guide-wrapper{
   padding: 50px;
+  padding-bottom: 25px;
   background: var(--color-transparent-black);
   border-radius: 10px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .guide-content{
@@ -11,6 +12,11 @@
   background: var(--milega-color-white);
   border-radius: 10px;
   text-align: left;
+  font-family: AvenirNext-Regular;
+  font-size: 22px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 26px;
 }
 
 .guide-nav-buttons{
@@ -25,12 +31,32 @@
   display: block;
   height: 50px;
   width: 50px;
-  background: #111;
   border-radius: 25px;
+  background-size: contain;
 }
 
 .guide-nav-buttons > a:hover{
-  background: #222;
+}
+
+.guide-nav-buttons .left-arrow{
+  background-image: url('/assets/images/arrow.svg');
+}
+
+.guide-nav-buttons .cross{
+  background-image: url('/assets/images/x.svg');
+}
+
+.guide-nav-buttons .success{
+  background-image: url('/assets/images/success.svg');
+}
+
+.guide-nav-buttons .right-arrow{
+  background-image: url('/assets/images/arrow.svg');
+  transform:scaleX(-1);
+}
+
+.guide-nav-buttons .hidden{
+  visibility: hidden;
 }
 
 @media all and (max-width: 610px) {
