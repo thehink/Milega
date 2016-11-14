@@ -74,6 +74,6 @@ Flight::route('POST /login', ['Pages', 'Login']);
 
 Flight::route('GET /logout', ['Login', 'logout']);
 
-
+Flight::route('GET /course(/@day)', ['Pages', 'Course']);
 
 Flight::start();

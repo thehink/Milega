@@ -36,7 +36,7 @@ $page = $page ?? 'profile';
       <? endif; ?>
 
     </ul>
-    <a href="/"><img src="./assets/images/milegalogo.png" alt="Logotype" /></a>
+    <a href="/"><img src="/assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
 
   <div id="login">
