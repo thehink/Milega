@@ -15,4 +15,7 @@ Localization::register([
   'EMAIL' => 'Email',
   'INTRODUCTION' => 'Introduktion',
   'COURSE' => 'Kurs',
+  'JIT_TEST' => 'JTI Test',
+  'LEADERSHIP_GRAPH' => 'Ledarskaps Graf',
+  'SETTINGS' => 'Inställningar',
 ]);

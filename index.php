@@ -61,6 +61,8 @@ Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
 //endpoint for profile
 Flight::route('/', ['Profile', 'get']);
 Flight::route('GET /profile', ['Pages', 'Profile']);
+Flight::route('GET /profile/graph', ['Pages', 'ProfileGraph']);
+Flight::route('GET /profile/settings', ['Pages', 'ProfileSettings']);
 
 //endpoint for register page
 Flight::route('GET /register', ['Pages', 'Register']);

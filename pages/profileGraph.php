@@ -3,7 +3,7 @@
 /**
  *
  */
-class Profile
+class ProfileGraph
 {
 
   public static function render(){
@@ -12,11 +12,11 @@ class Profile
       'subHeader' => [
         'JIT_TEST' => [
           'url' => '/profile',
-          'selected' => true
+          'selected' => false
         ],
         'LEADERSHIP_GRAPH' => [
           'url' => '/profile/graph',
-          'selected' => false
+          'selected' => true
         ],
         'SETTINGS' => [
           'url' => '/profile/settings',
