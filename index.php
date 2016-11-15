@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/header.php';
+require_once 'lib/autoload.php';
 require_once 'pages/register.php';
 require_once 'pages/login.php';
 require_once 'pages/profile.php';
