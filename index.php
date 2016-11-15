@@ -1,8 +1,6 @@
 <?php
 require_once 'lib/autoload.php';
-require_once 'pages/register.php';
 require_once 'pages/login.php';
-require_once 'pages/profile.php';
 
 /*
 Flight::map('error', function(Exception $ex){
@@ -59,7 +57,7 @@ Flight::route('/php_info', function(){
 Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
 
 //endpoint for profile
-Flight::route('/', ['Profile', 'get']);
+Flight::route('/', ['Pages', 'Profile']);
 Flight::route('GET /profile', ['Pages', 'Profile']);
 Flight::route('GET /profile/graph', ['Pages', 'ProfileGraph']);
 Flight::route('GET /profile/settings', ['Pages', 'ProfileSettings']);

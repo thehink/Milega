@@ -38,6 +38,7 @@ class Profile
   }
 
   public static function post(){
+    Authentication::requireLoggedIn();
     self::render();
   }
 }
