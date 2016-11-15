@@ -6,9 +6,14 @@
 class Profile
 {
 
+  static $assets = [
+    '<link href="/assets/css/profile.css" rel="stylesheet" />'
+  ];
+
   public static function render(){
     Flight::display( 'profile', [
       'title' => 'PROFILE',
+      'assets' => self::$assets,
       'subHeader' => [
         'JIT_TEST' => [
           'url' => '/profile',

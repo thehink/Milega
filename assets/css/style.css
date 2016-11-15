@@ -7,6 +7,8 @@
   --color-dark-green: #626A6C;
   --color-transparent-black: rgba(0,0,0,.5);
 
+  --color-light-green: #9ACBC7;
+
   --nav-triangle-height: 18px;
   --nav-triangle-width: 40px;
 }
@@ -18,6 +20,16 @@ html,body {
     margin:0;
     padding:0;
     height:100%;
+}
+
+h1{
+  font-family: AvenirNext-Regular;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.48px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -80,16 +92,16 @@ footer < p {
 
 .content {
   margin: auto;
-  width: 80%;
+  width: 70%;
   padding: 30px 10px 10px 10px;
-  text-align: center;
+  color: var(--milega-color-white);
 }
 
 .content-box{
   padding: 20px;
   background: var(--color-transparent-black);
-  border-radius: 10px;
-  margin: 0 auto;
+  border-radius: 4px;
+  margin: 0 auto 10px auto;
 }
 
 .nav {
@@ -148,6 +160,7 @@ footer < p {
   margin: 0 auto;
   padding: 0;
   min-height: 38.18px;
+  width: 80%;
 }
 
 .sub-header .sub-header-item{

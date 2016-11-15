@@ -1,0 +1,99 @@
+.jti-result {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0;
+}
+
+.jti-result .stats-wrapper{
+  width: 35%;
+  margin-top: 30px;
+}
+
+.jti-result .stats{
+  padding: 0 0 30px 0;
+  border-right: 4px solid var(--color-light-green);
+}
+
+.jti-result .text{
+  width: 65%;
+  padding: 30px 20px 0 20px;
+}
+
+.jti-result .text > h2{
+  margin: 0;
+}
+
+.jti-test{
+
+}
+
+.jti-test .test-item{
+  display: flex;
+  width: 60%;
+  margin: 0 auto 10px auto;
+}
+
+.jti-test .test-item > div{
+
+}
+
+.jti-test .test-item > .test-letter{
+}
+
+.jti-test .test-item > .test-letter:first-child{
+  padding-right: 7px;
+}
+
+.jti-test .test-item > .test-letter:last-child{
+  padding-left: 7px;
+}
+
+
+.jti-test .test-item > .test-bar{
+  display: block;
+  background: #FFF;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--color-light-green);
+}
+
+.jti-test .test-item > .test-bar > .test-bar-pos{
+  background: var(--color-light-green);
+  width: 14px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.stats h3{
+  text-align: center;
+}
+
+.test-results{
+  display: flex;
+}
+
+.test-results > ul{
+  margin: 0 auto;
+  padding: 0;
+}
+
+.test-results > ul > li{
+  letter-spacing: -0.59px;
+}
+
+.test-results > ul > li.result-title{
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+
+@media all and (max-width: 610px) {
+  .jti-result .stats-wrapper{
+    width: 100%;
+  }
+  .jti-result .stats{
+    border-right: none;
+  }
+}
