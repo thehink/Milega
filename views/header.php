@@ -8,6 +8,7 @@ $page = $page ?? 'profile';
     <meta charset="utf-8">
     <title><?=isset($title) ? Localization::get($title) . ' | ' :  ''?>Milega</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link href="/assets/css/avenir-next.css" rel="stylesheet" />
     <link href="/assets/css/normalize.css" rel="stylesheet" />
     <link href="/assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/form.css" rel="stylesheet" />

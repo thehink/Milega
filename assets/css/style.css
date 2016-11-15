@@ -20,6 +20,7 @@ html,body {
     margin:0;
     padding:0;
     height:100%;
+    font-family: AvenirNext-Regular;
 }
 
 h1{
@@ -178,9 +179,8 @@ footer < p {
 }
 
 .sub-header .sub-header-item.selected > a{
+  font-family: AvenirNext-Bold;
   text-decoration: underline;
-  color: #FFF;
-  font-weight: bold;
   cursor: default;
 }
 
