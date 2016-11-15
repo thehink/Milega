@@ -15,18 +15,20 @@
   background: var(--color-transparent-black);
   padding: 20px 20px;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   min-width: 500px;
   max-width: 700px;
   margin: 0;
+  position: relative;
 }
 
 .content-form textarea {
   border-radius: 5px;
   width: 100%;
-  min-height: 60px;
-  height: 100px;
+  min-height: 80px;
+  height: 120px;
   resize: none;
+  z-index: -1;
 }
 
 .content-course > h1 {
@@ -50,4 +52,49 @@
   letter-spacing: 0.33px;
   line-height: 21px;
   margin: 0.4em 0;
+}
+
+.button-day-form1 {
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/images/edit.svg");
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.button-day-form2 {
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/images/edit.svg");
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 35px;
+  top: 190px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.button-day-form3 {
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/images/edit.svg");
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 35px;
+  top: 372px;
+  cursor: pointer;
+  flex-grow: 1;
 }
