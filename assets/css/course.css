@@ -5,7 +5,7 @@
 .content-course{
   color: var(--milega-color-white);
   text-align: left;
-  width: 70%;
+  width: 100%;
   min-width: 500px;
   max-width: 700px;
   margin: 0 auto;
@@ -15,7 +15,7 @@
   background: var(--color-transparent-black);
   padding: 20px 20px;
   border-radius: 5px;
-  width: 70%;
+  width: 80%;
   min-width: 500px;
   max-width: 700px;
   margin: 0;
@@ -27,4 +27,27 @@
   min-height: 60px;
   height: 100px;
   resize: none;
+}
+
+.content-course > h1 {
+  font-family: AvenirNext-Bold;
+  font-size: 50px;
+  letter-spacing: -0.54px;
+  margin: 0.2em 0;
+}
+
+.content-course > h2 {
+  font-family: AvenirNext-Bold;
+  font-size: 30px;
+  letter-spacing: -0.33px;
+  line-height: 31px;
+  margin: 0.4em 0;
+}
+
+.content-form > p {
+  font-family: AvenirNext-Regular;
+  font-size: 20px;
+  letter-spacing: 0.33px;
+  line-height: 21px;
+  margin: 0.4em 0;
 }
