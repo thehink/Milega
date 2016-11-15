@@ -54,44 +54,16 @@
   margin: 0.4em 0;
 }
 
-.button-day-form1 {
+.button-day-form {
   width: 30px;
   height: 30px;
   background-image: url("/assets/images/edit.svg");
   border-radius: 50%;
   z-index: 100;
   display: flex;
-  justify-content: flex-end;
   position: absolute;
   right: 35px;
-  top: 30px;
+  margin-top: -28px;
   cursor: pointer;
-}
-
-.button-day-form2 {
-  width: 30px;
-  height: 30px;
-  background-image: url("/assets/images/edit.svg");
-  border-radius: 50%;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  right: 35px;
-  top: 190px;
-  cursor: pointer;
-}
-
-.button-day-form3 {
-  width: 30px;
-  height: 30px;
-  background-image: url("/assets/images/edit.svg");
-  border-radius: 50%;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  right: 35px;
-  top: 372px;
-  cursor: pointer;
+  background-size: 100%;
 }

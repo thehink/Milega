@@ -6,7 +6,7 @@
       <p>
         Det här vill jag med mitt ledarskap:
       </p>
-      <div class="button-day-form1">
+      <div class="button-day-form">
         <a href="#"></a>
 
       </div>
@@ -14,14 +14,14 @@
       <p>
         Vad vill jag åstadkomma med mitt ledarskap:
       </p>
-      <div class="button-day-form2">
+      <div class="button-day-form">
         <a href="#"></a>
       </div>
       <textarea></textarea>
       <p>
         Vilka konkreta saker måste jag ta tag i (lösa, utveckla, förbättra):
       </p>
-      <div class="button-day-form3">
+      <div class="button-day-form">
         <a href="#"></a>
       </div>
       <textarea></textarea>
