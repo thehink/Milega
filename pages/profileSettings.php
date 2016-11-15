@@ -7,8 +7,9 @@ class ProfileSettings
 {
 
   public static function render(){
-    Flight::display( 'profile', [
+    Flight::display( 'profileSettings', [
       'title' => 'PROFILE',
+      'page' => 'profile',
       'subHeader' => [
         'JIT_TEST' => [
           'url' => '/profile',
