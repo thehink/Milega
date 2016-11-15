@@ -1,5 +1,4 @@
 <div class="content">
-  <h2>Register</h2>
   <div class="modal-form form-wrapper">
     <form action="/register" method="POST">
       <input placeholder="Email" type="email" name="email" value="<?=isset($data['email']) ? $data['email'] : ''?>"/>
