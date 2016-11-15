@@ -6,7 +6,7 @@ $page = $page ?? 'profile';
 <html>
   <head>
     <meta charset="utf-8">
-    <title><?=isset($title) ? $title . ' | ' :  ''?>Milega</title>
+    <title><?=isset($title) ? Localization::get($title) . ' | ' :  ''?>Milega</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link href="/assets/css/normalize.css" rel="stylesheet" />
     <link href="/assets/css/style.css" rel="stylesheet" />
@@ -54,9 +54,9 @@ $page = $page ?? 'profile';
   <div class="content">
 <? if(isset($subHeader)): ?>
 
-    <? foreach ($subHeader as $title => $arr) : ?>
+    <? foreach ($subHeader as $subMenuTitle => $arr) : ?>
     <div class="sub-header-item<?=$arr['selected'] ? ' selected' : ''?>">
-      <a href="<?=$arr['url']?>"><?=$title?></a>
+      <a href="<?=$arr['url']?>"><?=Localization::get($subMenuTitle)?></a>
     </div>
     <? endforeach; ?>
 <? endif; ?>
