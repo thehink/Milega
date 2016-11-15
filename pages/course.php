@@ -11,7 +11,7 @@ class Course
   ];
 
   public static function render($data = []){
-    Flight::display( 'Course', [
+    Flight::display( 'course', [
       'assets' => self::$assets,
       'page' => 'course',
       'data' => $data,

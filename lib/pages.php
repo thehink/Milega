@@ -9,7 +9,7 @@ class Pages
      if(in_array($_SERVER['REQUEST_METHOD'], ['POST', 'GET', 'PUT', 'DELETE'])){
        try{
          //try and require the page file and call the appropriate method
-         $method_name = strtolower($method_name);
+         $method_name = lcfirst($method_name);
          require_once "pages/$method_name.php";
          call_user_func_array([$method_name, $_SERVER['REQUEST_METHOD']], $args);
        }catch(Exception $ex){
