@@ -35,6 +35,11 @@ class Login
       exit;
     }
 
+    $postData = [
+      'email' => htmlspecialchars($_POST['email'] ?? ''),
+      'password' => htmlspecialchars($_POST['password'] ?? '')
+    ];
+
     //Validate form with the FormValidator class
     $formErrors = FormValidator::validate($_POST, [
       'email' => 'required|email',
@@ -68,6 +73,6 @@ class Login
 
     }
 
-    self::render($_POST);
+    self::render($postData);
   }
 }
