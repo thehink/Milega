@@ -11,8 +11,9 @@ class Profile
   ];
 
   public static function render(){
-    Flight::display( 'profile', [
+    Flight::display( 'profileJTI', [
       'title' => 'PROFILE',
+      'page' => 'profile',
       'assets' => self::$assets,
       'subHeader' => [
         'JIT_TEST' => [
