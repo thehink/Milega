@@ -58,7 +58,7 @@
 
       if($guide === 'material'){
         $leftHidden = false;
-        $rightUrl = '/profile';
+        $rightUrl = '/course';
         $leftUrl = '/guide/profile';
         $success = true;
       }
@@ -66,7 +66,7 @@
        ?>
 
       <a class="left-arrow<?=$leftHidden ? ' hidden' : ''?>" href="<?=$leftUrl?>"></a>
-      <a class="cross" href="/profile"></a>
+      <a class="cross" href="/course"></a>
       <a class="<?=$success ? 'success' : 'right-arrow'?><?=$rightHidden ? ' hidden' : ''?>" href="<?=$rightUrl?>"></a>
     </div>
   </div>
