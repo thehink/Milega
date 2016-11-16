@@ -7,6 +7,7 @@ class Token
   {
     $data = json_encode([
       'id' => $this->id,
+      'hash' => $this->hash,
       'userId' => $this->userId,
       'expires' => $this->expires
     ]);
@@ -42,39 +43,46 @@ class Token
 
     $stmt = $db->prepare("
         INSERT INTO tokens (
+                  hash,
                   userId,
                   type,
                   expires
                 )
         VALUES (
+                  :hash,
                   :userId,
                   :type,
                   :expires
                 )
     ");
 
+    $hash = uniqid('', true);
 
     $stmt->execute([
+      'hash' => $hash,
       'userId' => $userId,
       'expires' => $expires,
       'type' => $type
     ]);
 
-    return self::getById($db->lastInsertId());
+    return self::getById($db->lastInsertId(), $hash);
   }
 
-  static function getById($id){
+  static function getById($id, $hash){
     $db = Flight::db();
 
     $stmt = $db->prepare("
-      SELECT id, userId, type, expires
+      SELECT id, hash, userId, type, expires
       FROM tokens
-      WHERE id = :id
+      WHERE
+        id = :id AND
+        hash = :hash
     ");
 
     $stmt->setFetchMode(PDO::FETCH_CLASS, 'Token');
     $stmt->execute([
-      'id' => $id
+      'id' => $id,
+      'hash' => $hash
     ]);
 
     return $stmt->fetch();
@@ -94,7 +102,7 @@ class Token
       return false;
     }
 
-    $token = self::getById($data->id);
+    $token = self::getById($data->id, $data->hash);
     if(!$token){
       return false;
     }
