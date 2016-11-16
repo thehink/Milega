@@ -48,7 +48,7 @@
     </div>
     <div class="text">
       <h2>ENFP</h2>
-      <p><b>Dominerande extravert intuition stödd av introvert känsla</b></p>
+      <p class="bold">Dominerande extravert intuition stödd av introvert känsla</p>
       <p>
         ENFP personligheten är en fri själ. De befinner sig ofta i festens centrum, fast till skillnad från Upptäckare är de inte intresserade i upphetsningen och njutningen, de är mer intresserade av de sociala och känslosamma banden de knyter med andra. Charmerande, självständiga, energiska och omtänksamma, de 7% av jordens befolkning de upptar kan garanterat hittas i alla sammanhang.
       </p><p>
