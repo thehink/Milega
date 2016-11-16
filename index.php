@@ -24,6 +24,12 @@ Flight::map('getError', function($error){
   }
 });
 
+Flight::map('getSuccess', function($success){
+  if(Flight::has($success)){
+    return '<span class="success">' . Localization::get(Flight::get($error)) . '</span>';
+  }
+});
+
 //map general 404s
 Flight::map('notFound', function(){
     // Handle not found
@@ -61,6 +67,7 @@ Flight::route('/', ['Pages', 'Profile']);
 Flight::route('GET /profile', ['Pages', 'Profile']);
 Flight::route('GET /profile/graph', ['Pages', 'ProfileGraph']);
 Flight::route('GET /profile/settings', ['Pages', 'ProfileSettings']);
+Flight::route('POST /profile/settings', ['Pages', 'ProfileSettings']);
 
 //endpoint for register page
 Flight::route('GET /register', ['Pages', 'Register']);
