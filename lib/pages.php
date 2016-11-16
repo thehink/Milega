@@ -11,7 +11,9 @@ class Pages
          //try and require the page file and call the appropriate method
          $method_name = lcfirst($method_name);
          require_once "pages/$method_name.php";
-         call_user_func_array([$method_name, $_SERVER['REQUEST_METHOD']], $args);
+         if(method_exists($method_name, $_SERVER['REQUEST_METHOD'])){
+           call_user_func_array([$method_name, $_SERVER['REQUEST_METHOD']], $args);
+         }
        }catch(Exception $ex){
         //if something went wrong
         //set error message
