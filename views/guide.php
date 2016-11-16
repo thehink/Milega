@@ -2,7 +2,7 @@
   <div class="guide-wrapper">
     <div class="guide-content">
       <?php if($guide === 'intro') : ?>
-      <p>Välkommen till Milegas ledarskapsutbildning!</p>
+      <p class="bold">Välkommen till Milegas ledarskapsutbildning!</p>
       <p>Här kommer en kort introduktion om vad de olika delarna på hemsidan består av.
         Utbildningen är till för att ge dig verktygen för att kunna reflektera över
         din ledarroll och hjälpa dig sätta rätt prioriteringar för att utvecklas som ledare.
