@@ -18,4 +18,5 @@ Localization::register([
   'JIT_TEST' => 'JTI Test',
   'LEADERSHIP_GRAPH' => 'Ledarskaps Graf',
   'SETTINGS' => 'Inställningar',
+  'WRONG_EMAIL_OR_PASSWORD' => 'Fel email eller lösenord',
 ]);

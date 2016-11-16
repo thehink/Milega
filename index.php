@@ -20,7 +20,7 @@ Flight::map('error', function(Exception $ex){
 //set a function to get error with html tag
 Flight::map('getError', function($error){
   if(Flight::has($error)){
-    return '<span class="error">' . Flight::get($error) . '</span>';
+    return '<span class="error">' . Localization::get(Flight::get($error)) . '</span>';
   }
 });
 
