@@ -8,6 +8,7 @@ class Register
 
   public static function render($data = [], $errors = []){
     Flight::display( 'register', [
+      'title' => 'REGISTER',
       'data' => $data,
       'errors' => $errors
     ]);

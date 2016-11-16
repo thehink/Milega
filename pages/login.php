@@ -7,6 +7,7 @@ class Login
 {
   public static function render($data = []){
     Flight::display( 'login', [
+      'title' => 'LOGIN',
       'data' => $data
     ]);
   }
