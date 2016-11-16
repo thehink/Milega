@@ -1,0 +1,6 @@
+[submodule "lib/vendor/flight"]
+	path = lib/vendor/flight
+	url = git://github.com/mikecao/flight.git
+[submodule "lib/vendor/swiftmailer"]
+	path = lib/vendor/swiftmailer
+	url = git://github.com/swiftmailer/swiftmailer.git
