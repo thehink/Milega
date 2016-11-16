@@ -80,6 +80,38 @@ class Authentication
     Flight::clear('user');
   }
 
+  public static function requestPasswordReset($email){
+    $user = User::getUserByEmail($email);
+
+    if(!$user){
+      throw new Exception("WRONG_EMAIL_OR_PASSWORD");
+    }
+
+    require_once 'vendor/swiftmailer/lib/swift_required.php';
+    return true;
+/*
+    $transport = Swift_SmtpTransport::newInstance('ssl://smtp.gmail.com', 465)
+    ->setUsername('username@gmail.com') // Your Gmail Username
+    ->setPassword('my_secure_gmail_password'); // Your Gmail Password
+
+    // Mailer
+    $mailer = Swift_Mailer::newInstance($transport);
+
+    // Create a message
+    $message = Swift_Message::newInstance('Wonderful Subject Here')
+        ->setFrom(array('sender@example.com' => 'Sender Name')) // can be $_POST['email'] etc...
+        ->setTo(array('receiver@example.com' => 'Receiver Name')) // your email / multiple supported.
+        ->setBody('Here is the <strong>message</strong> itself. It can be text or <h1>HTML</h1>.', 'text/html');
+
+    // Send the message
+    if ($mailer->send($message)) {
+        echo 'Mail sent successfully.';
+    } else {
+        echo 'I am sure, your configuration are not correct. :(';
+    }
+    */
+  }
+
   public static function isAdmin(){
     if(Authentication::$isLoggedIn && Flight::get('user')->role === 'admin'){
       return true;

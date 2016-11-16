@@ -26,7 +26,7 @@ Flight::map('getError', function($error){
 
 Flight::map('getSuccess', function($success){
   if(Flight::has($success)){
-    return '<span class="success">' . Localization::get(Flight::get($error)) . '</span>';
+    return '<span class="success">' . Localization::get(Flight::get($success)) . '</span>';
   }
 });
 
@@ -78,6 +78,9 @@ Flight::route('GET /test2', ['Pages', 'profile']);
 //endpoint for login page
 Flight::route('GET /login', ['Pages', 'Login']);
 Flight::route('POST /login', ['Pages', 'Login']);
+
+Flight::route('GET /forgot_password', ['Pages', 'ForgotPassword']);
+Flight::route('POST /forgot_password', ['Pages', 'ForgotPassword']);
 
 Flight::route('GET /logout', ['Login', 'logout']);
 

@@ -27,4 +27,6 @@ Localization::register([
   'ONE_TIME_A_MONTH' => 'EN GÅNG I MÅNADEN',
   'ONE_TIME_A_QUARTER' => 'EN GÅNG PER KVARTAL',
   'ONE_TIME_A_YEAR' => 'EN GÅNG PER ÅR',
+  'REQUEST_NEW_PASSWORD' => 'Skicka nytt lösenord',
+  'PASSWORD_RESET_LINK_SENT' => 'Länk till återställning av ditt lösenord har skickats',
 ]);
