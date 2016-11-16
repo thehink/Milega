@@ -1,13 +1,14 @@
 .jti-result {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-grow: 1;
   flex-shrink: 1;
+  flex-basis: 50%;
   padding: 0;
 }
 
 .jti-result .stats-wrapper{
-  width: 35%;
+  flex-basis: 250px;
   margin-top: 30px;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .jti-result .text{
-  width: 65%;
+  flex-basis: 100%;
   padding: 30px 20px 0 20px;
 }
 
@@ -90,8 +91,11 @@
 
 
 @media all and (max-width: 610px) {
+  .jti-result {
+    flex-wrap: wrap;
+  }
   .jti-result .stats-wrapper{
-    width: 100%;
+    flex-basis: 100%;
   }
   .jti-result .stats{
     border-right: none;
