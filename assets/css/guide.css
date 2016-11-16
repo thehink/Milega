@@ -3,8 +3,8 @@
   padding-bottom: 25px;
   background: var(--color-transparent-black);
   border-radius: 10px;
-  margin: 0 auto;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 .guide-content{
@@ -59,7 +59,11 @@
   visibility: hidden;
 }
 
-@media all and (max-width: 610px) {
+@media all and (max-width: 800px) {
+  .guide-wrapper{
+    padding: 30px;
+  }
   .guide-content {
+    padding: 20px;
   }
 }
