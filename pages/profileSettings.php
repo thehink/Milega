@@ -33,6 +33,7 @@ class ProfileSettings
   }
 
   public static function post(){
+    Authentication::requireLoggedIn();
     self::render();
   }
 }

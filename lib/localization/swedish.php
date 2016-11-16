@@ -19,4 +19,12 @@ Localization::register([
   'LEADERSHIP_GRAPH' => 'Ledarskaps Graf',
   'SETTINGS' => 'Inställningar',
   'WRONG_EMAIL_OR_PASSWORD' => 'Fel email eller lösenord',
+  'NOTIFICATIONS_METHOD' => 'Önskar påminnelser via:',
+  'HOW_OFTEN' => 'Hur ofta',
+  'PHONE_NUMBER' => 'Telefon Nummer',
+  'UPDATE' => 'Uppdatera',
+  'ONE_TIME_A_WEEK' => 'EN GÅNG I VECKAN',
+  'ONE_TIME_A_MONTH' => 'EN GÅNG I MÅNADEN',
+  'ONE_TIME_A_QUARTER' => 'EN GÅNG PER KVARTAL',
+  'ONE_TIME_A_YEAR' => 'EN GÅNG PER ÅR',
 ]);
