@@ -13,6 +13,14 @@
   letter-spacing: -0.26px;
 }
 
+label{
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+  margin-left: 20px;
+}
+
 a.remember-me{
   color: var(--milega-color-white);
   text-decoration: none;
@@ -39,7 +47,7 @@ a.remember-me:hover{
   position: relative;
 }
 
-.form-wrapper input{
+.form-wrapper input, .form-wrapper select{
   display: block;
   padding: 7px;
   border-radius: 3px;
