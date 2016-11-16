@@ -87,22 +87,20 @@ a.remember-me:hover{
   margin: 0 10px;
   border: 1px solid var(--milega-color-dark-green);
   border-radius: 3px;
-  width: 60%;
   cursor: pointer;
 }
 
 .form-wrapper button[type=submit]{
   display: block;
-  width: 40%;
 }
 
-.form-wrapper .error{
+.form-wrapper .error, .form-wrapper .success{
   display: block;
   color: var(--milega-color-red);
   margin: 10px 0 0 0;
   font-size: 20px;
   text-align: center;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,10,0,.5);
   padding: 3px;
 }
 
@@ -110,3 +108,7 @@ a.remember-me:hover{
   margin: -20px 0 10px 0;
   border-radius: 4px;
 }
+
+ .form-wrapper .success{
+   color: green;
+ }
