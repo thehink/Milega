@@ -1,5 +1,4 @@
 <?php
-require_once 'flight/Flight.php';
 require_once 'user.model.php';
 require_once 'token.model.php';
 
