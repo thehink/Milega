@@ -7,7 +7,8 @@ class FormValidator {
     'string' => 'FormValidator::validateString',
     'integer' => 'FormValidator::validateInteger',
     'email' => 'FormValidator::validateEmail',
-    'password' => 'FormValidator::validatePassword'
+    'password' => 'FormValidator::validatePassword',
+    'option' => 'FormValidator::validateOption',
   ];
 
   public static function validate($arr, $validation){
@@ -16,9 +17,10 @@ class FormValidator {
     foreach ($validation as $field => $value) {
       $validations = explode('|', $value);
       foreach ($validations as $validationType) {
-        if(array_key_exists($validationType, self::$validations)){
-          $func = self::$validations[$validationType];
-          $error = call_user_func($func, $arr[$field]);
+        $validationConfig = explode(':', $validationType);
+        if(array_key_exists($validationConfig[0], self::$validations)){
+          $func = self::$validations[$validationConfig[0]];
+          $error = call_user_func($func, $arr[$field] ?? '', $validationConfig[1] ?? NULL);
           if($error){
             $errors[$field] = $error;
             break;
@@ -37,6 +39,13 @@ class FormValidator {
 
 
     return false;
+  }
+
+  public static function validateOption($value, $data){
+    $arr = explode(',', $data);
+    if(!in_array($value, $arr)){
+      return 'THIS_IS_NOT_A_VALID_OPTION';
+    }
   }
 
   public static function validateInteger(){
