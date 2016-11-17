@@ -16,7 +16,7 @@ Localization::register([
   'INTRODUCTION' => 'Introduktion',
   'COURSE' => 'Kurs',
   'JIT_TEST' => 'JTI Test',
-  'LEADERSHIP_GRAPH' => 'Ledarskaps Graf',
+  'LEADERSHIP_GRAPH' => 'Ledarskapsgraf',
   'SETTINGS' => 'Inställningar',
   'WRONG_EMAIL_OR_PASSWORD' => 'Fel email eller lösenord',
   'NOTIFICATIONS_METHOD' => 'Önskar påminnelser via:',
