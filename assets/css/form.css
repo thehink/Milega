@@ -104,7 +104,7 @@ a.remember-me:hover{
   padding: 3px;
 }
 
-.form-wrapper input + .error{
+.form-wrapper input + .error, .form-wrapper select + .error{
   margin: -20px 0 10px 0;
   border-radius: 4px;
 }
