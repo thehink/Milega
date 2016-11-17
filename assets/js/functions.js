@@ -6,32 +6,28 @@
     login.style.display = "none";
   }
 }*/
+'use strict';
 
-function showTextarea(id){
+function showTextarea(textareaId, buttonId){
 
-  let saveButton = document.getElementsByClassName('saveButton');
-  let textid = document.getElementById(id);
+  //let saveButton = document.getElementsByClassName('saveButton');
+  let textid = document.getElementById(textareaId);
+  let buttonid = document.getElementById(buttonId);
 
   if (textid.style.height != '400px') {
     textid.style.height = '400px';
-
-    for (let i = 0; i < saveButton.length; i++) {
-      saveButton[i].style.display= 'block';
-
-    }
+    buttonid.style.display= 'block';
   }
 }
 
 
-function closeTextarea(id){
-  let saveButton = document.getElementsByClassName('saveButton');
-  let textid = document.getElementById(id);
+function closeTextarea(textareaId, buttonId){
+  //let saveButton = document.getElementsByClassName('saveButton');
+  let textid = document.getElementById(textareaId);
+  let buttonid = document.getElementById(buttonId);
 
   if(textid.style.height != '120px') {
     textid.style.height = '120px';
-    for (let i = 0; i < saveButton.length; i++) {
-      saveButton[i].style.display= 'none';
-
-    }
+    buttonid.style.display= 'none';
   }
 }
