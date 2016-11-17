@@ -10,9 +10,9 @@ class Localization
 
   public static function load($language){
     if(file_exists("./lib/localization/$language.php")){
-      include 'localization/' . $language . '.php';
+      require 'localization/' . $language . '.php';
     }else{
-      include 'localization/' . _LOCALIZATION_DEFAULT_ . '.php';
+      require 'localization/' . _LOCALIZATION_DEFAULT_ . '.php';
     }
   }
 
