@@ -21,3 +21,15 @@
     url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.ttf')  format('truetype'),
     url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
 }
+
+@font-face {
+    font-family: 'AvenirNext-DemiBold';
+    font-weight: bold;
+    font-style: normal;
+    font-variant:normal;
+    src: url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.eot?#iefix') format('eot'),
+    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.otf')  format('opentype'),
+    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.woff') format('woff'),
+    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.ttf')  format('truetype'),
+    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.svg#AvenirNext-Bold') format('svg');
+}
