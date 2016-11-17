@@ -2,7 +2,7 @@
 require_once 'user.model.php';
 require_once 'token.model.php';
 
-Flight::register('db', 'PDO', array('sqlite:db/milega.sqlite'));
+Flight::register('db', 'PDO', _PDO_DATABASE_);
 
 
 /**
