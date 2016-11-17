@@ -65,3 +65,13 @@
   cursor: pointer;
   background-size: 100%;
 }
+
+.saveButton {
+  display: none;
+  background: var(--milega-color-dark-green);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
