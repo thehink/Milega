@@ -186,12 +186,20 @@ footer < p {
 }
 
 .sub-header .sub-header-item.selected > a{
+  position: relative;
   font-family: AvenirNext-Bold;
-  text-decoration: underline;
   cursor: default;
 }
+/*#7EC4BE 100%*/
 
-
+.sub-header .sub-header-item.selected > a:after{
+  position: absolute;
+  content: "";
+  bottom: 8px;
+  left: 20px;
+  right:20px;
+  border-bottom: 2px solid #7EC4BE;
+}
 
 .login-form {
   width: 200px;
