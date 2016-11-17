@@ -14,7 +14,7 @@
     -->
       <div class="button-group">
         <button type="submit"><?=Localization::get('LOGIN')?></button>
-        <button type="button"><?=Localization::get('FORGOT_PASSWORD')?></button>
+        <button type="button" onclick="window.location='/forgot_password'"><?=Localization::get('FORGOT_PASSWORD')?></button>
       </div>
       <?=Flight::getError('login.error')?>
     </form>
