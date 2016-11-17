@@ -1,0 +1,49 @@
+.bubbles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
+  color: #000;
+  transform:scaleY(-1);
+  font-size: 20px;
+}
+
+.bubbles .bubble{
+  background: rgba(255,255,255,.8);
+  height: 350px;
+  width: 350px;
+  border-radius: 175px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform:scaleY(-1);
+}
+
+.bubbles .bubble:nth-child(0){
+  margin-left: 45px;
+}
+
+.bubbles .bubble:nth-child(1){
+  margin-left: -45px;
+}
+
+.bubbles .bubble:last-child{
+  margin-top: -90px;
+}
+
+.bubbles ul{
+  padding: 0;
+  margin: 0;
+  margin-top: -20px;
+}
+
+
+.bubbles ul > li.heading{
+  font-family: AvenirNext-Bold;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-bottom: 20px;
+}

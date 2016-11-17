@@ -29,4 +29,7 @@ Localization::register([
   'ONE_TIME_A_YEAR' => 'En gång per år',
   'REQUEST_NEW_PASSWORD' => 'Skicka nytt lösenord',
   'PASSWORD_RESET_LINK_SENT' => 'Länk till återställning av ditt lösenord har skickats',
+  'BOSS_ROLES' => 'Chefens roller',
+  'CONFLICT_MANAGEMENT' => 'Konfliktshantering',
+  'LECTURES' => 'Föreläsningar',
 ]);
