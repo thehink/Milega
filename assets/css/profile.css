@@ -8,7 +8,7 @@
 }
 
 .jti-result .stats-wrapper{
-  flex-basis: 250px;
+  flex-basis: 350px;
   margin-top: 30px;
 }
 
@@ -33,7 +33,10 @@
 .jti-test .test-item{
   display: flex;
   width: 60%;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 15px auto;
+  font-size: 20px;
+  line-height: 15px;
+  font-family: AvenirNext-DemiBold;
 }
 
 .jti-test .test-item > div{
@@ -44,7 +47,7 @@
 }
 
 .jti-test .test-item > .test-letter:first-child{
-  padding-right: 7px;
+  padding-right: 10px;
 }
 
 .jti-test .test-item > .test-letter:last-child{
@@ -62,13 +65,16 @@
 
 .jti-test .test-item > .test-bar > .test-bar-pos{
   background: var(--color-light-green);
-  width: 14px;
+  width: 10px;
   height: 100%;
-  border-radius: 8px;
+
 }
 
 .stats h3{
   text-align: center;
+  font-size: 26px;
+  color: #FFFFFF;
+  letter-spacing: -1px;
 }
 
 .test-results{
@@ -82,11 +88,13 @@
 
 .test-results > ul > li{
   letter-spacing: -0.59px;
+  margin-bottom: 2px;
 }
 
 .test-results > ul > li.result-title{
-  font-weight: bold;
+  font-family: AvenirNext-Bold;
   letter-spacing: 0;
+  margin-bottom: 3px;
 }
 
 
