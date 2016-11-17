@@ -16,8 +16,42 @@ class User
 
   }
 
+  public function updateNotificationSettings($method, $frequency){
+    $this->notificationMethod = $method;
+    $this->notificationFrequency = $frequency;
+    $this->save();
+  }
+
   public function remove(){
     //return self::remove($this->id);
+  }
+
+  public function save(){
+    $db = Flight::db();
+    $stmt = $db->prepare("
+    UPDATE users SET
+      email = :email,
+      role = :role,
+      firstName = :firstName,
+      lastName = :lastName,
+      guideComplete = :guideComplete,
+      notificationMethod = :notificationMethod,
+      notificationFrequency = :notificationFrequency
+    WHERE id = :id
+    ");
+
+    $stmt->execute([
+      'id' => $this->id,
+      'email' => $this->email,
+      'role' => $this->role,
+      'firstName' => $this->firstName,
+      'lastName' => $this->lastName,
+      'guideComplete' => $this->guideComplete,
+      'notificationMethod' => $this->notificationMethod,
+      'notificationFrequency' => $this->notificationFrequency
+    ]);
+
+    return $this;
   }
 
   public static function add($email, $password, $firstname, $lastname, $role = 'user'){
@@ -101,7 +135,9 @@ class User
         role,
         firstName,
         lastName,
-        guideComplete
+        guideComplete,
+        notificationMethod,
+        notificationFrequency
       FROM users
       WHERE id = :id
     ");

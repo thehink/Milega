@@ -32,4 +32,6 @@ Localization::register([
   'BOSS_ROLES' => 'Chefens roller',
   'CONFLICT_MANAGEMENT' => 'Konfliktshantering',
   'LECTURES' => 'Föreläsningar',
+  'THIS_IS_NOT_A_VALID_OPTION' => 'Detta är inte en giltig inställning',
+  'UPDATED_NOTIFICATION_SUCCESSFULLY' => 'Inställningar uppdaterade!',
 ]);
