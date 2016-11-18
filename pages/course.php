@@ -62,8 +62,8 @@ class Course
     Authentication::requireLoggedIn();
     $userId = Flight::get('user')->id;
 
-    $id = Flight::request()->data->id;
-    $text = Flight::request()->data->text;
+    $id = (int)Flight::request()->data->id;
+    $text = htmlspecialchars(Flight::request()->data->text);
 
     $answer = Answer::get($userId, $id);
 
