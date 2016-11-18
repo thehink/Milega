@@ -13,8 +13,8 @@ function showTextarea(textareaId, buttonId){
   let textid = document.getElementById(textareaId);
   let buttonid = document.getElementById(buttonId);
 
-  if (textid.style.height != '400px') {
-    textid.style.height = '400px';
+  if (textid.style.height != '250px') {
+    textid.style.height = '250px';
     buttonid.style.display= 'block';
     textid.removeAttribute('disabled');
   }
