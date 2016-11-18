@@ -10,11 +10,11 @@ class Course
     '<link href="/assets/css/course.css" rel="stylesheet" />'
   ];
 
-  public static function render($data = []){
+  public static function render($questions){
     Flight::display( 'course', [
       'assets' => self::$assets,
       'page' => 'course',
-      'data' => $data,
+      'questions' => $questions,
       'subHeader' => [
         'Dag 1' => [
           'url' => '/course/1',
@@ -45,12 +45,15 @@ class Course
   }
 
   public static function get($day){
-
     Authentication::requireLoggedIn();
-    self::render();
+    $day = $day ?? 1;
+
+    $questions = Questions::get($day);
+
+    self::render($questions);
   }
 
   public static function post(){
-    self::render();
+    //self::render();
   }
 }
