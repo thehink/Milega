@@ -1,9 +1,9 @@
 <?php
 require_once 'questions.php';
-require_once 'user.model.php';
-require_once 'token.model.php';
-require_once 'question.model.php';
-require_once 'answer.model.php';
+require_once 'models/user.model.php';
+require_once 'models/token.model.php';
+require_once 'models/question.model.php';
+require_once 'models/answer.model.php';
 
 Flight::register('db', 'PDO', _PDO_DATABASE_);
 
