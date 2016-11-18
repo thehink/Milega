@@ -48,12 +48,35 @@ class Course
     Authentication::requireLoggedIn();
     $day = $day ?? 1;
 
+    $userId = Flight::get('user')->id;
+
     $questions = Questions::get($day);
+    foreach ($questions as $question) {
+      $question->answer = Answer::get($userId, $question->id);
+    }
 
     self::render($questions);
   }
 
   public static function post(){
-    //self::render();
+    Authentication::requireLoggedIn();
+    $userId = Flight::get('user')->id;
+
+    $id = Flight::request()->data->id;
+    $text = Flight::request()->data->text;
+
+    $answer = Answer::get($userId, $id);
+
+    if(!$answer){
+      Answer::create($userId, $id, $text);
+    }else{
+      $answer->answer = $text;
+      $answer->save();
+    }
+
+    Flight::json([
+      'status' => 'ok'
+    ]);
+
   }
 }

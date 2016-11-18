@@ -39,7 +39,12 @@ function closeTextarea(textareaId, buttonId){
 
   fetch('/course/answer', {
     method: 'POST',
-    body: JSON.stringify({id: id, text:text})
+    body: JSON.stringify({id: id, text:text}),
+    mode: 'cors',
+    credentials: 'include',
+    headers: new Headers({
+  		'Content-Type': 'application/json'
+  	})
   })
     .then(response => {
       if(response.status === 200) return response.json();
