@@ -109,6 +109,8 @@ class Token
 
     $expires = strtotime($token->expires);
     if(time() > $expires){
+      //token expired so delete it
+      $token->delete();
       return false;
     }
 
