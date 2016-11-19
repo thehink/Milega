@@ -12,14 +12,14 @@ class Answer{
     $stmt = $db->prepare("
     UPDATE answers SET
       answer = :answer,
-      date = :date
+      dateUpdated = :dateUpdated
     WHERE id = :id
     ");
 
     return $stmt->execute([
       'id' => $this->id,
       'answer' => $this->answer,
-      'date' => date('', time()),
+      'dateUpdated' => date('Y-m-d H:i:s', time()),
     ]);
   }
 
@@ -28,7 +28,7 @@ class Answer{
     $db = Flight::db();
 
     $stmt = $db->prepare("
-      SELECT id, userId, answer, date
+      SELECT id, userId, answer, dateUpdated, dateCreated
       FROM answers
       WHERE
         questionId = :questionId AND
@@ -51,22 +51,19 @@ class Answer{
         INSERT INTO answers (
                   questionId,
                   userId,
-                  answer,
-                  date
+                  answer
                 )
         VALUES (
                   :questionId,
                   :userId,
-                  :answer,
-                  :date
+                  :answer
                 )
     ");
 
     $stmt->execute([
       'questionId' => $questionId,
       'userId' => $userId,
-      'answer' => $answer,
-      'date' => date('', time())
+      'answer' => $answer
     ]);
 
     return self::get($userId, $questionId);
