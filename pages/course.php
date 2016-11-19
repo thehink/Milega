@@ -7,7 +7,6 @@ class Course
 {
 
   public static $assets = [
-    '<link href="/assets/css/guide.css" rel="stylesheet" />',
     '<link href="/assets/css/course.css" rel="stylesheet" />'
   ];
 

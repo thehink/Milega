@@ -14,10 +14,6 @@
         <textarea id="text<?=$question->id?>" class="textarea" disabled="true"><?=$question->answer ? $question->answer->answer : ''?></textarea>
         <button id="button<?=$question->id?>" class="saveButton" type="submit" name="saveButton" onclick="closeTextarea('text<?=$question->id?>', 'button<?=$question->id?>')">SPARA</button>
       <?php endforeach; ?>
-      <div class="guide-nav-buttons">
-        <a class="left-arrow hidden" href="/guide/intro"></a>
-        <a class="right-arrow" href="/course/2"></a>
-      </div>
     </div>
 
   </div>
