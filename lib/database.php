@@ -46,7 +46,7 @@ class Database
     return $stmt->execute($where);
   }
 
-  static function get($table, $values, $where){
+  static function get($table, $values, $where, $class){
     $sql = "SELECT ";
     foreach ($values as $key) {
       $sql .= "$key, ";
@@ -61,7 +61,7 @@ class Database
     $db = Flight::db();
     $stmt = $db->prepare($sql);
 
-    $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this));
+    $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
     $stmt->execute(array_merge($values, $where));
 
     return $stmt->fetch();
