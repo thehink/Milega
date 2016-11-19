@@ -12,6 +12,10 @@ class User
 
   }
 
+  public function getFullName(){
+    return sprintf("%s %s", $this->firstName, $this->lastName);
+  }
+
   public function updatePassword($oldPassword, $password){
 
   }

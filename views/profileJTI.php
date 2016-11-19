@@ -1,5 +1,5 @@
 <div class="content">
-  <h1>Simon Schultz</h1>
+  <h1><?=Flight::get('user')->getFullName()?></h1>
   <div class="content-box jti-result">
     <div class="stats-wrapper">
       <div class="stats">
