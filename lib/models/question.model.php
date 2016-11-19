@@ -10,9 +10,11 @@ class Question extends Model
 
   }
 
-  public function save(){
-    $values = [
-      'groupId' => NULL,
+  public function save($values){
+    $values = $values ?? [
+      'groupId' => $this->groupId,
+      'question' => $this->question,
+      'day' => $this->day
     ];
 
     return $this->__save($values);
