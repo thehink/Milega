@@ -1,6 +1,8 @@
 <?php
-
 class FormValidator {
+
+  static $publickey = "6LelfQwUAAAAAIlsC9DPcIVZF96mg9ezdLIFRKmN";
+  static $privatekey = "6LelfQwUAAAAAIbs-CIWNBpxy9ozqUo0M9DnbmUz";
 
   public static $validations = [
     'required' => 'FormValidator::validateRequired',
@@ -9,6 +11,7 @@ class FormValidator {
     'email' => 'FormValidator::validateEmail',
     'password' => 'FormValidator::validatePassword',
     'option' => 'FormValidator::validateOption',
+    'recaptcha' => 'FormValidator::validateRecaptcha'
   ];
 
   public static function validate($arr, $validation){
@@ -30,6 +33,19 @@ class FormValidator {
     }
 
     return $errors;
+  }
+
+  public static function getCaptchaHTML(){
+    return '<div class="g-recaptcha" data-sitekey="' . self::$publickey . '"></div>';
+  }
+
+  public static function validateRecaptcha($value){
+    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.self::$privatekey.'&response='.$value);
+    $responseData = json_decode($verifyResponse);
+
+    if(!$responseData->success){
+      return 'RECAPTCHA_ERROR';
+    }
   }
 
   public static function validateRequired($value){

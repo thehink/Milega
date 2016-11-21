@@ -6,7 +6,7 @@
 class ForgotPassword
 {
   public static $assets = [
-
+    "<script src='https://www.google.com/recaptcha/api.js'></script>"
   ];
 
   public static function render($data = []){
@@ -35,7 +35,8 @@ class ForgotPassword
 
     //Validate form with the FormValidator class
     $formErrors = FormValidator::validate($_POST, [
-      'email' => 'required|email'
+      'email' => 'required|email',
+      'g-recaptcha-response' => 'required|recaptcha'
     ]);
 
     foreach ($formErrors as $key => $value) {
