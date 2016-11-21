@@ -87,29 +87,44 @@ class Authentication
       throw new Exception("WRONG_EMAIL_OR_PASSWORD");
     }
 
+    if(!_EMAIL_ACTIVATED_){
+      throw new Exception("EMAIL_SERVICE_NOT_ACTIVE");
+    }
+
     require_once 'vendor/swiftmailer/lib/swift_required.php';
-    return true;
-/*
-    $transport = Swift_SmtpTransport::newInstance('ssl://smtp.gmail.com', 465)
-    ->setUsername('username@gmail.com') // Your Gmail Username
-    ->setPassword('my_secure_gmail_password'); // Your Gmail Password
+
+    //create a reset token that is valid for 10 minutes
+    $token = Token::create($user->id, 'reset', date("Y-m-d H:i:s", time() + 60 * 10));
+
+    $transport = Swift_SmtpTransport::newInstance(_EMAIL_SMTP_HOST_, _EMAIL_SMTP_PORT_, _EMAIL_SMTP_SECURITY_)
+    ->setUsername(_EMAIL_SMTP_USERNAME_) // Your Gmail Username
+    ->setPassword(_EMAIL_SMTP_PASSWORD_); // Your Gmail Password
 
     // Mailer
     $mailer = Swift_Mailer::newInstance($transport);
 
     // Create a message
-    $message = Swift_Message::newInstance('Wonderful Subject Here')
-        ->setFrom(array('sender@example.com' => 'Sender Name')) // can be $_POST['email'] etc...
-        ->setTo(array('receiver@example.com' => 'Receiver Name')) // your email / multiple supported.
-        ->setBody('Here is the <strong>message</strong> itself. It can be text or <h1>HTML</h1>.', 'text/html');
+    $message = Swift_Message::newInstance('Password Reset')
+        ->setFrom([_EMAIL_SMTP_USERNAME_ => 'Milega']) // can be $_POST['email'] etc...
+        ->setTo([$email => $user->getFullName()]) // your email / multiple supported.
+        ->setBody('Here is the password reset link: http://' . _DOMAIN_ . '/reset_password?token=' . base64url_encode($token->toString()), 'text/html');
 
     // Send the message
-    if ($mailer->send($message)) {
-        echo 'Mail sent successfully.';
-    } else {
-        echo 'I am sure, your configuration are not correct. :(';
+    if(!$mailer->send($message)){
+      throw new Exception("EMAIL_NOT_SENT");
     }
-    */
+
+    return true;
+  }
+
+  public static function resetPassword($userId, $newPassword){
+    $user = User::getUser($userId);
+    if(!$user){
+      throw new Exception("COULD_NOT_FIND_USER");
+    }
+
+    $user->updatePassword($newPassword);
+    return true;
   }
 
   public static function isAdmin(){

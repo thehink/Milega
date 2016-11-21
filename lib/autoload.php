@@ -13,6 +13,7 @@ if(file_exists($config_path)){
 }
 
 require_once 'vendor/flight/flight/Flight.php';
+require_once 'functions.php';
 require_once 'database.php';
 require_once 'authentication.php';
 require_once 'localization.php';

@@ -35,4 +35,7 @@ Localization::register([
   'LECTURES' => 'Föreläsningar',
   'THIS_IS_NOT_A_VALID_OPTION' => 'Detta är inte en giltig inställning',
   'UPDATED_NOTIFICATION_SUCCESSFULLY' => 'Inställningar uppdaterade!',
+  'PASSWORD_CONFIRM' => 'Konfirmera Lösenord',
+  'RESET_PASSWORD' => 'Återställ Lösenord',
+  'THIS_FIELD_NEED_TO_BE_IDENTICAL_TO_password' => 'Du måste skriva samma lösenord här som i fältet ovan',
 ]);

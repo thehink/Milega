@@ -16,8 +16,14 @@ class User
     return sprintf("%s %s", $this->firstName, $this->lastName);
   }
 
-  public function updatePassword($oldPassword, $password){
-
+  public function updatePassword($password){
+    Database::save('users',
+    [
+      'password' => password_hash($password, PASSWORD_BCRYPT)
+    ],
+    [
+      'id' => $this->id
+    ]);
   }
 
   public function updateNotificationSettings($method, $frequency){

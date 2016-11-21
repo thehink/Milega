@@ -82,6 +82,9 @@ Flight::route('POST /login', ['Pages', 'Login']);
 Flight::route('GET /forgot_password', ['Pages', 'ForgotPassword']);
 Flight::route('POST /forgot_password', ['Pages', 'ForgotPassword']);
 
+Flight::route('GET /reset_password', ['Pages', 'ResetPassword']);
+Flight::route('POST /reset_password', ['Pages', 'ResetPassword']);
+
 Flight::route('GET /logout', ['Login', 'logout']);
 
 Flight::route('GET /course(/@day)', ['Pages', 'Course']);

@@ -12,7 +12,8 @@ class FormValidator {
     'password' => 'FormValidator::validatePassword',
     'option' => 'FormValidator::validateOption',
     'recaptcha' => 'FormValidator::validateRecaptcha',
-    'regex' => 'FormValidator::validateRegex'
+    'regex' => 'FormValidator::validateRegex',
+    'confirm' => 'FormValidator::validateConfirm',
   ];
 
   public static function validate($arr, $validation){
@@ -47,6 +48,14 @@ class FormValidator {
     if(!$responseData->success){
       return 'RECAPTCHA_ERROR';
     }
+  }
+
+  public static function validateConfirm($value, $confirmPost){
+    if($value !== $_POST[$confirmPost]){
+      return 'THIS_FIELD_NEED_TO_BE_IDENTICAL_TO_' . $confirmPost;
+    }
+
+    return false;
   }
 
   public static function validateRequired($value){
