@@ -136,6 +136,13 @@ footer < p {
 .nav ul li{
   display: block;
   position: relative;
+  order: 1;
+}
+
+.nav ul li.float-right{
+  position: absolute;
+  right: 150px;
+  order: 4;
 }
 
 .nav ul li > a{
