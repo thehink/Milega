@@ -8,7 +8,7 @@
 }
 
 .jti-result .stats-wrapper{
-  flex-basis: 450px;
+  flex-basis: 500px;
   margin-top: 40px;
 }
 
@@ -20,6 +20,9 @@
 .jti-result .text{
   flex-basis: 100%;
   padding: 40px 20px 0 20px;
+  font-size: 20px;
+  letter-spacing: −0.22px;
+  line-height: 30px;
 }
 
 .jti-result .text > h2{
@@ -27,7 +30,7 @@
 }
 
 .jti-test{
-
+  position: relative;
 }
 
 .jti-test .test-item{
@@ -37,6 +40,15 @@
   font-size: 24px;
   line-height: 18px;
   font-family: AvenirNext-DemiBold;
+}
+
+.jti-test .line{
+  position: absolute;
+  width: 2px;
+  height: calc(100% + 20px);
+  margin-top: -10px;
+  left: 50%;
+  background: var(--color-light-green);
 }
 
 .jti-test .test-item > div{
@@ -72,8 +84,8 @@
 
 .stats h3{
   text-align: center;
-  font-size: 26px;
-  color: #FFFFFF;
+  font-family: AvenirNext-Bold;
+  font-size: 30px;
   letter-spacing: -1px;
 }
 

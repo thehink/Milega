@@ -4,9 +4,10 @@
     <div class="stats-wrapper">
       <div class="stats">
         <div class="jti-test">
+          <div class="line"></div>
           <div class="test-item">
             <div class="test-letter">E</div>
-            <div class="test-bar"><div class="test-bar-pos" style="margin-left:40%;"></div></div>
+            <div class="test-bar"><div class="test-bar-pos" style="margin-left:30%;"></div></div>
             <div class="test-letter">I</div>
           </div>
           <div class="test-item">
