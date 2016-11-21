@@ -30,19 +30,22 @@
           <ul>
             <li class="result-title">Styrkor</li>
             <li>Nyfiken</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
+            <li>Observant</li>
+            <li>Entusiastisk</li>
+            <li>Kommunikation</li>
+            <li>Social</li>
           </ul>
           <ul>
             <li class="result-title">Svagheter</li>
             <li>Opraktisk</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
-            <li>Nyfiken</li>
+            <li>Svårfokuserad</li>
+            <li>Lättstressad</li>
+            <li>Emotionell</li>
+            <li>Övertänkare</li>
           </ul>
+        </div>
+        <div class="button-group">
+          <button class="analyze-button">Visa Analys</button>
         </div>
       </div>
     </div>

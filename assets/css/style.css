@@ -222,6 +222,12 @@ li {
   display: block;
 }
 
+.button-group{
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
 button{
   font-family: AvenirNext-Regular;
   font-size: 19px;

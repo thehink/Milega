@@ -71,12 +71,6 @@ a.remember-me:hover{
   margin-left: 10px;
 }
 
-.form-wrapper .button-group{
-  display: flex;
-  justify-content: center;
-  padding: 0 10px;
-}
-
 
 .form-wrapper button{
 
@@ -90,6 +84,10 @@ a.remember-me:hover{
 .form-wrapper button[type=button]{
   display: block;
   width: 60%;
+}
+
+.form-wrapper button.wide{
+  width: auto;
 }
 
 .form-wrapper .error, .form-wrapper .success{

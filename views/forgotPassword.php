@@ -9,7 +9,7 @@
       <?=Flight::getError('password.form.error.g-recaptcha-response')?>
 
       <div class="button-group">
-        <button type="submit"><?=Localization::get('REQUEST_NEW_PASSWORD')?></button>
+        <button class="wide" type="submit"><?=Localization::get('REQUEST_NEW_PASSWORD')?></button>
       </div>
       <?=Flight::getError('password.error')?>
     </form>

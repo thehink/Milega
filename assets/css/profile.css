@@ -8,8 +8,8 @@
 }
 
 .jti-result .stats-wrapper{
-  flex-basis: 350px;
-  margin-top: 30px;
+  flex-basis: 450px;
+  margin-top: 40px;
 }
 
 .jti-result .stats{
@@ -19,7 +19,7 @@
 
 .jti-result .text{
   flex-basis: 100%;
-  padding: 30px 20px 0 20px;
+  padding: 40px 20px 0 20px;
 }
 
 .jti-result .text > h2{
@@ -32,10 +32,10 @@
 
 .jti-test .test-item{
   display: flex;
-  width: 60%;
+  width: 50%;
   margin: 0 auto 15px auto;
-  font-size: 20px;
-  line-height: 15px;
+  font-size: 24px;
+  line-height: 18px;
   font-family: AvenirNext-DemiBold;
 }
 
@@ -59,7 +59,7 @@
   display: block;
   background: #FFF;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 2px solid var(--color-light-green);
 }
 
@@ -88,13 +88,17 @@
 
 .test-results > ul > li{
   letter-spacing: -0.59px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .test-results > ul > li.result-title{
   font-family: AvenirNext-Bold;
   letter-spacing: 0;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.analyze-button{
+  margin: 40px 0 0 0;
 }
 
 
