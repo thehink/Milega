@@ -11,7 +11,8 @@ class FormValidator {
     'email' => 'FormValidator::validateEmail',
     'password' => 'FormValidator::validatePassword',
     'option' => 'FormValidator::validateOption',
-    'recaptcha' => 'FormValidator::validateRecaptcha'
+    'recaptcha' => 'FormValidator::validateRecaptcha',
+    'regex' => 'FormValidator::validateRegex'
   ];
 
   public static function validate($arr, $validation){
@@ -68,7 +69,21 @@ class FormValidator {
 
   }
 
-  public static function validateString(){
+  public static function validateRegex($value, $regex){
+    $options = [
+      "options"=> [
+        "regexp" => $regexp
+      ]
+    ];
+
+    $valid = filter_var($value, FILTER_VALIDATE_REGEXP, $options);
+
+    if(!$valid){
+      return 'INVALID_' . $regex;
+    }
+  }
+
+  public static function validateString($value){
 
   }
 
@@ -84,8 +99,10 @@ class FormValidator {
     return false;
   }
 
-  public static function validatePassword(){
-
+  public static function validatePassword($value){
+    if(strlen($value) < 6){
+      return 'PASSWORD_TOO_SHORT';
+    }
   }
 
 }
