@@ -23,6 +23,7 @@ Localization::register([
   'HOW_OFTEN' => 'Hur ofta',
   'PHONE_NUMBER' => 'Telefon Nummer',
   'UPDATE' => 'Uppdatera',
+  'SAVE' => 'Spara',
   'ONE_TIME_A_WEEK' => 'En gång i veckan',
   'ONE_TIME_A_MONTH' => 'En gång i månaden',
   'ONE_TIME_A_QUARTER' => 'En gång i kvartal',

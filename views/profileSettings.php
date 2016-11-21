@@ -19,7 +19,7 @@
       <?=Flight::getError('settings.form.error.frequency')?>
 
       <div class="button-group">
-        <button type="submit"><?=Localization::get('UPDATE')?></button>
+        <button type="submit"><?=Localization::get('SAVE')?></button>
       </div>
       <?=Flight::getError('settings.error')?>
       <?=Flight::getSuccess('settings.success')?>
