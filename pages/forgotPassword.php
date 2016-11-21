@@ -18,6 +18,9 @@ class ForgotPassword
   }
 
   public static function get(){
+    if(Authentication::$isLoggedIn){
+      Flight::redirect('/profile');
+    }
     self::render();
   }
 
