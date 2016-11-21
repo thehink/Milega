@@ -127,7 +127,9 @@ footer < p {
 }
 
 .nav ul{
+  width: calc(100% - 114px);
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   padding: 0px;
   margin: 0;
@@ -141,9 +143,8 @@ footer < p {
 }
 
 .nav ul li.float-right{
-  position: absolute;
-  right: 150px;
   order: 4;
+  margin-left: auto;
 }
 
 .nav ul li > a{

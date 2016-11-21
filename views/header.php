@@ -35,7 +35,6 @@ $page = $page ?? 'profile';
       <? if($page === 'register' || Authentication::isAdmin()) :?>
       <li class="<?=$page === 'register' ? 'selected' : ''?>"><a href="/register"><?=Localization::get('REGISTER')?></a></li>
       <? endif; ?>
-
     </ul>
     <a href="/"><img src="/assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
