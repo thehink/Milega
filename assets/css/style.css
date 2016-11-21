@@ -28,12 +28,12 @@ html,body {
 }
 
 h1{
-  font-family: AvenirNext-Regular;
+  font-family: AvenirNext-Bold;
   font-size: 40px;
   color: #FFFFFF;
-  letter-spacing: -1.01px;
+  letter-spacing: 1px;
   font-weight:normal;
-  margin: 20px 20px;
+  margin: 20px 0;
   padding: 0;
   text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
 }
