@@ -39,16 +39,6 @@ $page = $page ?? 'profile';
     </ul>
     <a href="/"><img src="/assets/images/milegalogo.png" alt="Logotype" /></a>
   </nav>
-
-  <div id="login">
-      <form class="login-form" action="/login" method="POST">
-        <input type="email" class="loginRow" name="email" placeholder="Din email" />
-        <input type="password" class="loginRow" name="password" placeholder="Lösenord"/>
-        <input type="checkbox" name="remember" id="rememberCheckbox">
-        <label for="rememberCheckbox" style="font-size: 12px">Kom ihåg mig</label>
-        <input type="submit" id="loginButton" value="Logga in">
-      </form>
-  </div>
 </header>
 
 <div class="sub-header">

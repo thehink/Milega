@@ -1,11 +1,11 @@
 .modal-form{
   background: var(--color-transparent-black);
-  padding: 10px 10px 25px 10px;
+  padding: 18px 15px 35px 15px;
   border-radius: 5px;
   width: 50%;
   min-width: 370px;
-  max-width: 370px;
-  margin: 0 auto;
+  max-width: 400px;
+  margin: 14% auto 0 auto;
   color: var(--milega-color-white);
   font-family: AvenirNext-Regular;
   font-size: 24px;
@@ -49,7 +49,8 @@ a.remember-me:hover{
 
 .form-wrapper input, .form-wrapper select{
   display: block;
-  padding: 7px;
+  padding: 10px;
+  font-size: 23px;
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,.1);
   margin: 25px auto 25px auto;
@@ -60,7 +61,7 @@ a.remember-me:hover{
 
 
 ::-webkit-input-placeholder{
-  color: #393939;
+  color: #666;
 }
 
 .form-wrapper input[type=checkbox]{
@@ -72,26 +73,23 @@ a.remember-me:hover{
 
 .form-wrapper .button-group{
   display: flex;
-  width: 95%;
-  margin: 0 auto;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 
 .form-wrapper button{
-  font-family: AvenirNext-Regular;
-  font-size: 19px;
-  color: #FFFFFF;
-  letter-spacing: -0.21px;
-  background: var(--milega-color-dark-green);
-  padding: 6px 15px;
-  margin: 0 10px;
-  border: 1px solid var(--milega-color-dark-green);
-  border-radius: 3px;
-  cursor: pointer;
+
 }
 
 .form-wrapper button[type=submit]{
   display: block;
+  width: 40%;
+}
+
+.form-wrapper button[type=button]{
+  display: block;
+  width: 60%;
 }
 
 .form-wrapper .error, .form-wrapper .success{
@@ -112,3 +110,9 @@ a.remember-me:hover{
  .form-wrapper .success{
    color: green;
  }
+
+.g-recaptcha{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

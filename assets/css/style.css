@@ -205,27 +205,6 @@ footer < p {
   width: 200px;
 }
 
-#login {
-  position: absolute;
-  top: 65px;
-  right: 10px;
-  z-index: 10;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 5px 5px 5px #c3c3c3;
-  border-radius: 5px;
-  display: none;
-}
-
-#loginButton {
-border-radius: 5px;
-border: 1px solid grey;
-padding: 3px;
-background-color: white;
-margin-top: 3px;
-float: right;
-}
-
 .loginRow {
 border-radius: 5px;
 padding: 3px;
@@ -241,6 +220,28 @@ li a {
 
 li {
   display: block;
+}
+
+button{
+  font-family: AvenirNext-Regular;
+  font-size: 19px;
+  color: #FFFFFF;
+  letter-spacing: -0.21px;
+  background: var(--milega-color-dark-green);
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 1px solid var(--milega-color-dark-green);
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.5);
+}
+
+button:focus{
+  outline: none;
+}
+
+button:active{
+  box-shadow: inset 1px 1px 10px rgba(0,0,0,.5);
 }
 
 
