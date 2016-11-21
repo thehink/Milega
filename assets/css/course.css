@@ -73,10 +73,23 @@
   margin-right: 10px;
 }
 
-.guide-nav-buttons{
+.guide-nav-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0;
   margin-left: 0;
   width: calc(100%);
+}
+
+.right {
+  background-image: url('/assets/images/arrow.svg');
+  transform:scaleX(-1);
+  width: 30px;
+  height: 30px;
+  z-index: 101;
+  cursor: pointer;
+  background-size: 100%;
+  position: absolute;
+  left: 43%;
+  margin-top: -45px;
 }
