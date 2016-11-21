@@ -1,5 +1,6 @@
 <div class="content">
-  <div class="content-box bubbles">
+  <h1>Chefens Roller</h1>
+  <div class="bubbles">
     <div class="bubble">
       <ul>
         <li class="heading">Coach</li>
