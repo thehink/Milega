@@ -17,6 +17,7 @@ function showTextarea(textareaId, buttonId){
     textid.style.height = '250px';
     buttonid.style.display= 'block';
     textid.removeAttribute('disabled');
+    textid.focus();
   }
 }
 
