@@ -44,7 +44,7 @@ class Login
     //Validate form with the FormValidator class
     $formErrors = FormValidator::validate($_POST, [
       'email' => 'required|email',
-      'password' => 'required|password'
+      'password' => 'required'
     ]);
 
     foreach ($formErrors as $key => $value) {
