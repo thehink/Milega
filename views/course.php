@@ -6,7 +6,7 @@
     </h2>
     <div class="content-form">
 
-      <? if ($day ==2) ?>
+      <? if ($day ==2): ?>
       <p>
         Detta är första övningen du gör i att färdigställa målet med ditt ledarskap.
         Dokumentet kommer att vara levande under hela utbildningen och det är meningen att du skall fylla på allteftersom du tillför mer kunskaper om dig själv och vad du vill göra i din roll som ledare.
@@ -23,7 +23,10 @@
       <br>
       <h3 class="bold">Mina styrkor och svagheter utifrån min JTI-profil</h3>
 
-      <h2 class="bold">Visa min JTI-profil</h2>
+      <h2 class="bold"><u>Visa min JTI-profil</u> </h2>
+      <div class="right"></div>
+      <br>
+      <? endif; ?>
 
       <?php foreach ($questions as $question) : ?>
       <p>
