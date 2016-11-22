@@ -12,7 +12,7 @@
       </p>
       <?php endif; ?>
       <?php if($guide === 'profile') : ?>
-      <p>Under fliken <b>Profil</b> finns tre funktioner.</p>
+      <p>Under fliken <span class="bold">Profil</span> finns tre funktioner.</p>
 
       <p>
         JTI-profilen: Här får du svaret på vad för typ av
@@ -30,10 +30,10 @@
       <?php endif; ?>
       <?php if($guide === 'material') : ?>
       <p>
-        Under fliken <b>Material</b> finner du frågor som du ska besvara under kursen. När kursen är klar så har du möjlighet att editera din text allt eftersom du utvecklas.
+        Under fliken <span class="bold">Material</span> finner du frågor som du ska besvara under kursen. När kursen är klar så har du möjlighet att editera din text allt eftersom du utvecklas.
       </p>
       <p>
-        Under fliken <b>Bilagor</b> finner du föreläsningsmaterial som du får under kursen. Här har Milega möjlighet att lägga till nytt material.</p>
+        Under fliken <span class="bold">Bilagor</span> finner du föreläsningsmaterial som du får under kursen. Här har Milega möjlighet att lägga till nytt material.</p>
       </p>
       <?php endif; ?>
     </div>

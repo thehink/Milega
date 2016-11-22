@@ -24,10 +24,10 @@ $page = $page ?? 'profile';
   <nav class="nav">
     <ul>
       <? if(Flight::has('user')) : ?>
-      <li class="bold" class="<?=$page === 'course' ? 'selected' : ''?>"><a href="/course"><?=Localization::get('COURSE')?></a></li>
-      <li class="bold" class="<?=$page === 'material' ? 'selected' : ''?>"><a href="/material"><?=Localization::get('MATERIAL')?></a></li>
-      <li class="bold" class="<?=$page === 'profile' ? 'selected' : ''?>"><a href="/profile"><?=Localization::get('PROFILE')?></a></li>
-      <li class="bold" class="float-right"><a href="/logout"><?=Localization::get('LOGOUT')?></a></li>
+      <li class="<?=$page === 'course' ? 'selected' : ''?>"><a href="/course"><?=Localization::get('COURSE')?></a></li>
+      <li class="<?=$page === 'material' ? 'selected' : ''?>"><a href="/material"><?=Localization::get('MATERIAL')?></a></li>
+      <li class="<?=$page === 'profile' ? 'selected' : ''?>"><a href="/profile"><?=Localization::get('PROFILE')?></a></li>
+      <li class="float-right"><a href="/logout"><?=Localization::get('LOGOUT')?></a></li>
       <? endif; ?>
       <? if($page === 'login' || !Authentication::$isLoggedIn) :?>
       <li class="<?=$page === 'login' ? 'selected' : ''?>"><a href="/login"><?=Localization::get('LOGIN')?></a></li>

@@ -4,7 +4,8 @@
   background: var(--color-transparent-black);
   border-radius: 10px;
   max-width: 851px;
-  margin: 0 auto;
+  margin: 10px auto;
+  margin-top: 6%;
 }
 
 .guide-content{
@@ -32,7 +33,7 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-size: contain;
+  background-size: 99.99999%; /* Fix for some display bug with svgs*/
 }
 
 .guide-nav-buttons > a:hover{
