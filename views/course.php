@@ -37,7 +37,7 @@
         </div>
 
         <textarea id="text<?=$question->id?>" class="textarea" disabled="true"  ><?=$question->answer ? $question->answer->answer : ''?></textarea>
-        <button id="button<?=$question->id?>" class="saveButton" type="submit" name="saveButton" onclick="closeTextarea('text<?=$question->id?>', 'button<?=$question->id?>')">SPARA</button>
+        <button id="button<?=$question->id?>" class="saveButton" type="submit" name="saveButton" onclick="closeTextarea('text<?=$question->id?>', 'button<?=$question->id?>')">Spara</button>
       <?php endforeach; ?>
     </div>
 

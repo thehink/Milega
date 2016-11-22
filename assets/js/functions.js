@@ -15,7 +15,7 @@ function showTextarea(textareaId, buttonId){
 
   if (textid.style.height != '250px') {
     textid.style.height = '250px';
-    buttonid.style.display= 'block';
+    buttonid.style.display= 'inline-block';
     textid.removeAttribute('disabled');
     textid.focus();
   }
