@@ -113,6 +113,10 @@
   margin: 40px 0 0 0;
 }
 
+.profile-graph + .content-box{
+  width: calc(100% - 50px);
+}
+
 
 @media all and (max-width: 610px) {
   .jti-result {
