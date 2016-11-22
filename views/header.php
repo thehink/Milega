@@ -36,7 +36,8 @@ $page = $page ?? 'profile';
       <li class="<?=$page === 'register' ? 'selected' : ''?>"><a href="/register"><?=Localization::get('REGISTER')?></a></li>
       <? endif; ?>
     </ul>
-    <a href="/"><img src="/assets/images/milegalogo.png" alt="Logotype" /></a>
+    <a class="logo" href="/"><img src="/assets/images/milegalogo.png" alt="Logotype" /></a>
+    <a class="hamburger" href="#">&#9776;</a>
   </nav>
 </header>
 

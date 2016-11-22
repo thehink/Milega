@@ -8,6 +8,7 @@
 }*/
 'use strict';
 
+
 function showTextarea(textareaId, buttonId){
 
   let textid = document.getElementById(textareaId);
@@ -59,3 +60,14 @@ function closeTextarea(textareaId, buttonId){
     });
 
 }
+
+function toggleMenu(){
+  document.querySelector('.nav > ul').classList.toggle('show');
+}
+
+document.addEventListener('DOMContentLoaded', event => {
+  document.querySelector('.hamburger').addEventListener('click', event => {
+    event.preventDefault();
+    toggleMenu();
+  });
+}, false);
