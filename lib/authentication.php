@@ -26,7 +26,8 @@ class Authentication
     $user = User::getUser($_SESSION['userId']);
 
     if(!$user){
-      throw new Exception("Couldn't find logged in user!");
+      //throw new Exception("Couldn't find logged in user!");
+      return;
     }
     self::$isLoggedIn = true;
     Flight::set('user', $user);
