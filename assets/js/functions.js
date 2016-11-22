@@ -8,6 +8,32 @@
 }*/
 'use strict';
 
+function onLoad(){
+  document.querySelector('.hamburger').addEventListener('click', event => {
+    event.preventDefault();
+    toggleMenu();
+  });
+
+  document.addEventListener('scroll', event => {
+    const element = document.querySelector('.jti-result .stats');
+    if(!element || window.innerWidth < 610){
+      return;
+    }
+
+    const height = 230;
+
+    window.requestAnimationFrame(() => {
+      const deltaHeight = window.scrollY - height;
+      if(deltaHeight > 0){
+        element.style.marginTop = `${deltaHeight}px`;
+      }else{
+        element.style.marginTop = `0px`;
+      }
+    });
+
+
+  });
+}
 
 function showTextarea(textareaId, buttonId){
 
@@ -65,9 +91,4 @@ function toggleMenu(){
   document.querySelector('.nav > ul').classList.toggle('show');
 }
 
-document.addEventListener('DOMContentLoaded', event => {
-  document.querySelector('.hamburger').addEventListener('click', event => {
-    event.preventDefault();
-    toggleMenu();
-  });
-}, false);
+document.addEventListener('DOMContentLoaded', onLoad, false);
