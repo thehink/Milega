@@ -60,7 +60,7 @@ Flight::route('/php_info', function(){
 });
 
 //endpoint for introduction
-Flight::route('GET /guide(/@id)', ['Pages', 'Guide']);
+Flight::route('GET /guide(/@id:profile|material|intro)', ['Pages', 'Guide']);
 
 //endpoint for profile
 Flight::route('/', ['Pages', 'Profile']);
@@ -87,7 +87,7 @@ Flight::route('POST /reset_password', ['Pages', 'ResetPassword']);
 
 Flight::route('GET /logout', ['Login', 'logout']);
 
-Flight::route('GET /course(/@day)', ['Pages', 'Course']);
+Flight::route('GET /course(/@day:[0-9]{1,3})', ['Pages', 'Course']);
 Flight::route('POST /course/answer', ['Pages', 'Course']);
 
 Flight::route('GET /material(/@material)', ['Pages', 'Material']);
