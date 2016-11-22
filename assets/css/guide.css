@@ -33,7 +33,7 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-size: contain;
+  background-size: 99.99999%;
 }
 
 .guide-nav-buttons > a:hover{
