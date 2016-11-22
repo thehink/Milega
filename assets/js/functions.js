@@ -8,31 +8,24 @@
 }*/
 'use strict';
 
+
 function onLoad(){
   document.querySelector('.hamburger').addEventListener('click', event => {
     event.preventDefault();
     toggleMenu();
   });
 
-  document.addEventListener('scroll', event => {
-    const element = document.querySelector('.jti-result .stats');
-    if(!element || window.innerWidth < 610){
-      return;
-    }
+  const scrollX = 230;
+  const statsElement = document.querySelector('.jti-result .stats');
 
-    const height = 230;
-
-    window.requestAnimationFrame(() => {
-      const deltaHeight = window.scrollY - height;
-      if(deltaHeight > 0){
-        element.style.marginTop = `${deltaHeight}px`;
-      }else{
-        element.style.marginTop = `0px`;
-      }
+  if(statsElement){
+    document.addEventListener('scroll', event => {
+      window.requestAnimationFrame(() => {
+        const deltaHeight = window.scrollY - scrollX;
+        statsElement.classList.toggle("fixed", deltaHeight > 0);
+      });
     });
-
-
-  });
+  }
 }
 
 function showTextarea(textareaId, buttonId){
