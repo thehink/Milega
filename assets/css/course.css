@@ -30,14 +30,13 @@
 }
 
 .content-course > h1 {
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Regular;
   font-size: 50px;
   letter-spacing: -0.54px;
   margin: 0.2em 0;
 }
 
 .content-course > h2 {
-  font-family: AvenirNext-Bold;
   font-size: 30px;
   letter-spacing: -0.33px;
   line-height: 31px;
