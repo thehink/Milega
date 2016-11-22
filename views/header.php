@@ -53,5 +53,5 @@ $page = $page ?? 'profile';
 <? endif; ?>
   </div>
 </div>
-
+<div class="bg"></div>
 <div class="content-wrapper">

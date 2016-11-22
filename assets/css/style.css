@@ -87,13 +87,21 @@ footer < p {
   margin: 5px;
 }
 
+.bg{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/backgroundimage-min.png") no-repeat;
+  background-size: cover;
+  z-index: -5;
+}
+
 .content-wrapper {
   position: relative;
   display: block;
   min-height: calc(100% - 97px);
   padding-bottom: 50px;
-  background: url("/assets/images/backgroundimage-min.png") no-repeat;
-  background-size: cover;
 }
 
 .content {
