@@ -114,7 +114,8 @@
 }
 
 .profile-graph + .content-box{
-  width: calc(100% - 50px);
+  width: calc(100% - 45px);
+  margin-left: 28px;
 }
 
 
