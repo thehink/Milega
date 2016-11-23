@@ -44,9 +44,9 @@
 .jti-test .test-item{
   display: flex;
   width: 50%;
-  margin: 0 auto 15px auto;
-  font-size: 24px;
-  line-height: 18px;
+  margin: 0 auto 18px auto;
+  font-size: 22px;
+  line-height: 16px;
   font-family: AvenirNext-DemiBold;
 }
 
@@ -64,14 +64,16 @@
 }
 
 .jti-test .test-item > .test-letter{
+  margin-top: 2px;
+  width: 20px;
 }
 
 .jti-test .test-item > .test-letter:first-child{
-  padding-right: 10px;
+  margin-right: 13px;
 }
 
 .jti-test .test-item > .test-letter:last-child{
-  padding-left: 7px;
+  padding-left: 8px;
 }
 
 
@@ -85,7 +87,7 @@
 
 .jti-test .test-item > .test-bar > .test-bar-pos{
   background: var(--color-light-green);
-  width: 10px;
+  width: 13px;
   height: 100%;
 
 }

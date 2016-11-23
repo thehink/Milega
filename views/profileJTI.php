@@ -7,23 +7,23 @@
           <div class="line"></div>
           <div class="test-item">
             <div class="test-letter">E</div>
-            <div class="test-bar"><div class="test-bar-pos" style="margin-left:30%;"></div></div>
-            <div class="test-letter">I</div>
-          </div>
-          <div class="test-item">
-            <div class="test-letter">E</div>
-            <div class="test-bar"><div class="test-bar-pos" style="margin-left:calc(100% - 14px);"></div></div>
-            <div class="test-letter">I</div>
-          </div>
-          <div class="test-item">
-            <div class="test-letter">E</div>
-            <div class="test-bar"><div class="test-bar-pos" style="margin-left:50%;"></div></div>
-            <div class="test-letter">I</div>
-          </div>
-          <div class="test-item">
-            <div class="test-letter">E</div>
             <div class="test-bar"><div class="test-bar-pos" style="margin-left:20%;"></div></div>
             <div class="test-letter">I</div>
+          </div>
+          <div class="test-item">
+            <div class="test-letter">S</div>
+            <div class="test-bar"><div class="test-bar-pos" style="margin-left:70%;"></div></div>
+            <div class="test-letter">N</div>
+          </div>
+          <div class="test-item">
+            <div class="test-letter">T</div>
+            <div class="test-bar"><div class="test-bar-pos" style="margin-left:60%;"></div></div>
+            <div class="test-letter">F</div>
+          </div>
+          <div class="test-item">
+            <div class="test-letter">J</div>
+            <div class="test-bar"><div class="test-bar-pos" style="margin-left:70%;"></div></div>
+            <div class="test-letter">P</div>
           </div>
         </div>
         <h3>ENFP</h3>
@@ -46,7 +46,7 @@
           </ul>
         </div>
         <div class="button-group">
-          <button class="analyze-button">Visa Analys</button>
+          <button class="link analyze-button"><a href="https://issuu.com/decisiondynamics/docs/jti_report_swe?e=19598493/31149008" target="_blank">Visa Analys</a></button>
         </div>
       </div>
     </div>
