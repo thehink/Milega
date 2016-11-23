@@ -120,7 +120,11 @@
 }
 
 .analyze-button{
-  margin: 40px 0 0 0;
+  margin: 40px 5px 0 5px;
+}
+
+button.analyze-button > a{
+  padding: 10px 17px;
 }
 
 .profile-graph + .content-box{

@@ -10,11 +10,12 @@ class Profile
     '<link href="/assets/css/profile.css" rel="stylesheet" />'
   ];
 
-  public static function render(){
+  public static function render($guideComplete){
     Flight::display( 'profileJTI', [
       'title' => 'PROFILE',
       'page' => 'profile',
       'assets' => self::$assets,
+      'guideComplete' => $guideComplete,
       'subHeader' => [
         'JIT_TEST' => [
           'url' => '/profile',
@@ -36,12 +37,13 @@ class Profile
     Authentication::requireLoggedIn();
 
     $user = Flight::get('user');
+    $guideComplete = $user->guideComplete;
     if(!$user->guideComplete){
       $user->guideComplete = true;
       $user->save();
     }
 
-    self::render();
+    self::render($guideComplete);
   }
 
   public static function post(){

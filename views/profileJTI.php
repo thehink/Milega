@@ -46,6 +46,9 @@
           </ul>
         </div>
         <div class="button-group">
+          <?php if(1==1) : ?>
+          <button class="link analyze-button"><a href="/course">Börja Kurs</a></button>
+          <?php endif; ?>
           <button class="link analyze-button"><a href="https://issuu.com/decisiondynamics/docs/jti_report_swe?e=19598493/31149008" target="_blank">Visa Analys</a></button>
         </div>
       </div>
