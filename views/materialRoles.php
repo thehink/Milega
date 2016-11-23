@@ -1,5 +1,5 @@
 <div class="content">
-  <h1>Chefens Roller</h1>
+  <h1>Chefens roller</h1>
   <div class="bubbles">
     <div class="bubble">
       <ul>
