@@ -15,15 +15,13 @@ function onLoad(){
     toggleMenu();
   });
 
-  const scrollX = 230;
   const statsElement = document.querySelector('.jti-result .stats');
+  const scrollTop = statsElement.getBoundingClientRect().top - 20 + window.scrollY;
 
   if(statsElement){
     document.addEventListener('scroll', event => {
-      window.requestAnimationFrame(() => {
-        const deltaHeight = window.scrollY - scrollX;
-        statsElement.classList.toggle("fixed", deltaHeight > 0);
-      });
+      const deltaHeight = window.scrollY - scrollTop;
+      statsElement.classList.toggle("fixed", deltaHeight > 0);
     });
   }
 }
