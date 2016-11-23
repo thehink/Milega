@@ -34,6 +34,13 @@ class Profile
 
   public static function get(){
     Authentication::requireLoggedIn();
+
+    $user = Flight::get('user');
+    if(!$user->guideComplete){
+      $user->guideComplete = true;
+      $user->save();
+    }
+
     self::render();
   }
 

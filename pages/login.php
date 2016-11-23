@@ -63,7 +63,7 @@ class Login
             if(!$user->guideComplete){
               Flight::redirect('/guide');
             }else{
-              Flight::redirect('/');
+              Flight::redirect('/course');
             }
             exit;
           }

@@ -23,6 +23,10 @@ class Material
       'LECTURES' => [
         'url' => '/material/lectures',
         'selected' => $material === 'lectures'
+      ],
+      'INTRO' => [
+        'url' => '/guide',
+        'selected' => $material === 'guide'
       ]
     ];
 

@@ -24,6 +24,7 @@ Localization::register([
   'PHONE_NUMBER' => 'Telefon Nummer',
   'UPDATE' => 'Uppdatera',
   'SAVE' => 'Spara',
+  'INTRO' => 'Guide',
 
   'ONE_TIME_A_WEEK' => 'En gång per vecka',
   'ONE_TIME_A_MONTH' => 'En gång per månad',
