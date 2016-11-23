@@ -9,15 +9,15 @@
 
 .jti-result .stats-wrapper{
   position: relative;
-  flex-basis: 500px;
-  min-width: 310px;
+  flex-basis: 400px;
+  min-width: 300px;
   margin-top: 40px;
 }
 
 .jti-result .stats{
   padding: 0 0 30px 0;
   border-right: 4px solid var(--color-light-green);
-  min-width: 310px;
+  min-width: 300px;
 }
 
 .jti-result .stats.fixed{
