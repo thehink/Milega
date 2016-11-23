@@ -6,8 +6,7 @@
     src: url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.eot?#iefix') format('eot'),
     url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.otf')  format('opentype'),
     url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.woff') format('woff'),
-    url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.ttf')  format('truetype'),
-    url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+    url('/assets/fonts/AvenirNext-Regular/AvenirNext-Regular.ttf')  format('truetype');
 }
 
 @font-face {
@@ -18,8 +17,7 @@
     src: url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.eot?#iefix') format('eot'),
     url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.otf')  format('opentype'),
     url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.woff') format('woff'),
-    url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.ttf')  format('truetype'),
-    url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+    url('/assets/fonts/AvenirNext-Bold/AvenirNext-Bold.ttf')  format('truetype');
 }
 
 @font-face {
@@ -30,6 +28,5 @@
     src: url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.eot?#iefix') format('eot'),
     url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.otf')  format('opentype'),
     url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.woff') format('woff'),
-    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.ttf')  format('truetype'),
-    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.svg#AvenirNext-Bold') format('svg');
+    url('/assets/fonts/AvenirNext-DemiBold/AvenirNext-DemiBold.ttf')  format('truetype');
 }
