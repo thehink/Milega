@@ -29,7 +29,7 @@
       <? endif; ?>
 
       <?php foreach ($questions as $question) : ?>
-      <p>
+      <p class="question">
         <?=$question->question?>
       </p>
         <div class="button-day-form" onclick="showTextarea('text<?=$question->id?>', 'button<?=$question->id?>')">
